@@ -4,6 +4,7 @@ import Historia from "@/components/home/historia";
 import Aulas from "@/components/home/aulas";
 import Vidas from "@/components/home/vidas";
 import Papelitos from "@/components/home/papelitos";
+import Articulos from "@/components/home/articulos";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Aulas />
       <Vidas />
       <Papelitos />
+      <Articulos />
     </div>
   );
 }
