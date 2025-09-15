@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/ipen-rln",  
   output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
