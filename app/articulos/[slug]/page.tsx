@@ -41,7 +41,7 @@ export default function Articulo(props: { params: { slug: string } }) {
         <h1 className="text-4xl md:text-5xl font-semibold mb-8 max-w-4xl text-center mx-auto lg:mx-0">
           {article.data.title}
         </h1>
-        <Markdown className="prose lg:prose-xl">{article.content}</Markdown>
+        <Markdown className="prose">{article.content}</Markdown>
       </article>
     </div>
   );
