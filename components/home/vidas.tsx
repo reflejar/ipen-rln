@@ -1,8 +1,8 @@
 export default function Vidas() {
   return (
-    <section className="bg-[url('/img/bg-fondo.png')] h-screen bg-cover bg-center ">
+    <section className="bg-[url('/ipen-rln/img/bg-fondo.png')] h-screen bg-cover bg-center ">
       {/* Background Geometric Shapes */}
-      <div className="bg-[url('/img/bg-vidas.png')] bg-no-repeat bg-left-bottom  bg-[length:50%] relative min-h-screen flex items-center justify-between overflow-hidden pt-16">
+      <div className="bg-[url('/ipen-rln/img/bg-vidas.png')] bg-no-repeat bg-left-bottom  bg-[length:50%] relative min-h-screen flex items-center justify-between overflow-hidden pt-16">
         {/* Background Geometric Shapes */}
 
         {/* Content */}
@@ -19,7 +19,7 @@ export default function Vidas() {
               <div
                 className="flex flex-col items-center justify-center min-h-full rounded-lg  text-xl font-semibold p-8"
                 style={{
-                  backgroundImage: "url('/img/con-pin.png')",
+                  backgroundImage: "url('/ipen-rln/img/con-pin.png')",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",

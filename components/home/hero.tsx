@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="bg-[url('/img/bg-hero.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="bg-[url('/ipen-rln/img/bg-hero.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

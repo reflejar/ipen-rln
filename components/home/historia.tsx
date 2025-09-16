@@ -1,8 +1,8 @@
 export default function Historia() {
   return (
-    <section className="bg-[url('/img/bg-fondo.png')] bg-cover bg-center ">
+    <section className="bg-[url('/ipen-rln/img/bg-fondo.png')] bg-cover bg-center ">
       {/* Background Geometric Shapes */}
-      <div className="bg-[url('/img/bg-historia.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <div className="bg-[url('/ipen-rln/img/bg-historia.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 items-center">

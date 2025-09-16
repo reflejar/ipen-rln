@@ -17,9 +17,9 @@ const papeles = [
 
 export default function Papelitos() {
   return (
-    <section className="bg-[url('/img/bg-fondo.png')]   bg-cover bg-center">
+    <section className="bg-[url('/ipen-rln/img/bg-fondo.png')]   bg-cover bg-center">
       {/* Background Geometric Shapes */}
-      <div className="bg-[url('/img/mancha-1.png')] bg-no-repeat bg-left bg-[length:50%] relative h-[100dvh] flex items-center justify-between overflow-hidden pt-16">
+      <div className="bg-[url('/ipen-rln/img/mancha-1.png')] bg-no-repeat bg-left bg-[length:50%] relative h-[100dvh] flex items-center justify-between overflow-hidden pt-16">
         {/* Content */}
         <div className="mx-auto px-4 sm:px-6 lg:px-8 text-center h-[100%] w-full pt-16 flex flex-col justify-between gap-4">
           <div className="grid gap-6 md:gap-12 items-center">
