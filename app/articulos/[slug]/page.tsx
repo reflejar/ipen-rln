@@ -37,7 +37,7 @@ export default function Articulo(props: { params: { slug: string } }) {
   const article = getArticleContent(slug);
 
   return (
-    <div className="md:pt-[calc(theme(height.nav)+1.5rem)] pt-[calc(theme(height.navMobile)+1.5rem)] bg-[url('/img/bg-papel-madera.png')] bg-cover bg-center">
+    <div className="md:pt-[calc(theme(height.nav)+1.5rem)] pt-[calc(theme(height.navMobile)+1.5rem)] bg-[url('/ipen-rln/img/bg-papel-madera.png')] bg-cover bg-center">
       <article className="h-screen relative min-h-screen  overflow-hidden pt-8 w-10/12 mx-auto">
         <h1 className="text-4xl md:text-5xl font-semibold mb-8 max-w-4xl text-center mx-auto lg:mx-0">
           {article.data.title}

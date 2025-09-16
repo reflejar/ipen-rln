@@ -1,8 +1,8 @@
 export default function Aulas() {
   return (
-    <section className="bg-[url('/img/bg-fondo.png')] h-screen bg-cover bg-center ">
+    <section className="bg-[url('/ipen-rln/img/bg-fondo.png')] h-screen bg-cover bg-center ">
       {/* Background Geometric Shapes */}
-      <div className="bg-[url('/img/mancha-1.png')] bg-no-repeat bg-left bg-[length:50%] relative min-h-screen flex items-center justify-between overflow-hidden pt-16">
+      <div className="bg-[url('/ipen-rln/img/mancha-1.png')] bg-no-repeat bg-left bg-[length:50%] relative min-h-screen flex items-center justify-between overflow-hidden pt-16">
         {/* Background Geometric Shapes */}
 
         {/* Content */}
@@ -21,7 +21,7 @@ export default function Aulas() {
               <div
                 className="flex flex-col items-center justify-center min-h-full rounded-lg text-white text-xl font-semibold p-8"
                 style={{
-                  backgroundImage: "url('/img/sticker-izq.png')",
+                  backgroundImage: "url('/ipen-rln/img/sticker-izq.png')",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -35,7 +35,7 @@ export default function Aulas() {
               <div
                 className="flex flex-col items-center justify-center min-h-full rounded-lg text-white text-xl font-semibold p-8"
                 style={{
-                  backgroundImage: "url('/img/sticker-izq.png')",
+                  backgroundImage: "url('/ipen-rln/img/sticker-izq.png')",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
