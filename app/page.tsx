@@ -8,7 +8,7 @@ import Articulos from "@/components/home/articulos";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Hero />
       <Paisita />
       <Historia />
