@@ -7,7 +7,7 @@ export default function QueEs() {
       style={{ backgroundSize: "40%" }}
     >
       {/* Background Geometric Shapes */}
-      <div className="bg-[url('/img/circulos.png')] bg-cover bg-opa bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <div className="bg-[url('/img/circulos.png')] bg-cover  bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* Background Geometric Shapes */}
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
