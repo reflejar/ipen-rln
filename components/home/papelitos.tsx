@@ -31,7 +31,8 @@ export default function Papelitos() {
           <div className="flex items-center justify-center h-[50dvh] relative">
             {papeles.map((papel, idx) => (
               <div
-                className="absolute -bottom-56 transition hover:-translate-y-60 hover:z-30"
+                key={idx}
+                className="absolute  top-64  transition hover:top-auto hover:bottom-0 hover:z-30"
                 style={{
                   left: `${(idx / 7) * 100}%`, // distribuye entre 0% y 100%
                 }}
@@ -45,7 +46,7 @@ export default function Papelitos() {
                     alt="papel"
                     width={0}
                     height={0}
-                    className="w-full top-0 left-0"
+                    className="w-full left-0"
                     sizes="100vw"
                   ></Image>
                 </div>
