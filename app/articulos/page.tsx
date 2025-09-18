@@ -1,13 +1,4 @@
 import Hero from "@/components/articulos/Hero";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import getArticleMetadata from "@/utils/getArticleMetadata";
 
 export default function Articulos() {
   return (

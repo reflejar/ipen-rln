@@ -2,7 +2,7 @@
 title: "Llegar a Costa Rica sin papeles no me hizo ilegal"
 author: "Periodista en el exilio"
 description: "Cruzar la frontera fue duro. Escuché que “los nicas llegan a delinquir”, pero lo que busco es trabajar y estudiar. Este es mi testimonio"
-image: "/img/articulos/obs-fondo.png"
+image: "/ipen-rln/img/articulos/obs-fondo.png"
 date: "11-2022"
 ---
 

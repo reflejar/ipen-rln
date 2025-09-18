@@ -1,9 +1,8 @@
-import markdown from "markdown-to-jsx";
+import Markdown from "markdown-to-jsx";
 import getArticleMetadata from "@/utils/getArticleMetadata";
 import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
-import Markdown from "markdown-to-jsx";
 
 function getArticleContent(slug: string) {
   const folder = "articulos/";
@@ -42,7 +41,7 @@ export default function Articulo(props: { params: { slug: string } }) {
         <h1 className="text-4xl md:text-5xl font-semibold mb-8 max-w-4xl text-center mx-auto lg:mx-0">
           {article.data.title}
         </h1>
-        <Markdown>{article.content}</Markdown>
+        <Markdown className="prose">{article.content}</Markdown>
       </article>
     </div>
   );

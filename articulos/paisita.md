@@ -2,7 +2,7 @@
 title: "“Paisita” no es mi nombre"
 author: "Marvin J."
 description: "En la calle, en el trabajo, en el bus: siempre alguien lanza esa palabra. Este es mi relato de cómo se siente ser reducido a un apodo despectivo."
-image: "/img/articulos/obs-fondo2.png"
+image: "/ipen-rln/img/articulos/obs-fondo2.png"
 date: "11-2022"
 ---
 
