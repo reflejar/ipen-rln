@@ -10,7 +10,19 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ArticleCard({ article, idx }) {
+type Article = {
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+};
+
+interface ArticleCardProps {
+  article: Article;
+  idx: number;
+}
+
+export default function ArticleCard({ article, idx }: ArticleCardProps) {
   return (
     <Card
       className="w-full p-0 flex overflow-hidden  hover:z-10 opacity-80 scale-90 hover:scale-100 hover:opacity-100"
