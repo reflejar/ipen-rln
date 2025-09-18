@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ContraNarrativa() {
   return (
     <section
-      className="bg-[url('/img/bg-contra-narrativa.png')] bg-contain bg-left bg-no-repeat  -my-20 z-10 h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+      className="bg-[url('/ipen-rln/img/bg-contra-narrativa.png')] bg-contain bg-left bg-no-repeat  -my-20 z-10 h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
       style={{ backgroundSize: "40%" }}
     >
       {/* Background Geometric Shapes */}
@@ -18,7 +18,7 @@ export default function ContraNarrativa() {
                 height={0}
                 className="w-1/3"
                 sizes="100vw"
-                src="/img/subrayado.png"
+                src="/ipen-rln/img/subrayado.png"
                 alt="subrayado"
               />
             </div>

@@ -3,11 +3,11 @@ import { Button } from "../ui/button";
 export default function QueEs() {
   return (
     <section
-      className="bg-[url('/img/logo-papel.png')] bg-no-repeat bg-right"
+      className="bg-[url('/ipen-rln/img/logo-papel.png')] bg-no-repeat bg-right"
       style={{ backgroundSize: "40%" }}
     >
       {/* Background Geometric Shapes */}
-      <div className="bg-[url('/img/circulos.png')] bg-cover  bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <div className="bg-[url('/ipen-rln/img/circulos.png')] bg-cover  bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* Background Geometric Shapes */}
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

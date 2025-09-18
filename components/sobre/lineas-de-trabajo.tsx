@@ -18,7 +18,7 @@ const lineas = [
 
 export default function LineasTrabajo() {
   return (
-    <section className="bg-[url('/img/bg-lineas.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="bg-[url('/ipen-rln/img/bg-lineas.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -30,7 +30,7 @@ export default function LineasTrabajo() {
           {lineas.map((linea, idx) => (
             <div className="text-center lg:text-left ">
               <p
-                className={`bg-[url('/img/frame.png')] px-10 py-16 text-5xl md:text-6xl text-center mb-8 max-w-2xl mx-auto lg:mx-0 font-extrabold ${linea.color}`}
+                className={`bg-[url('/ipen-rln/img/frame.png')] px-10 py-16 text-5xl md:text-6xl text-center mb-8 max-w-2xl mx-auto lg:mx-0 font-extrabold ${linea.color}`}
                 style={{ backgroundSize: "100% 100%" }}
               >
                 {idx + 1}

@@ -1,6 +1,6 @@
 export default function Objetivos() {
   return (
-    <section className="bg-[url('/img/bg-objetivo-gral.png')] bg-cover bg-center  z-10 h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="bg-[url('/ipen-rln/img/bg-objetivo-gral.png')] bg-cover bg-center  z-10 h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="relative z-10 w-7xl mx-auto px-4 sm:px-6 lg:px-8">
