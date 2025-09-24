@@ -1,13 +1,16 @@
 export default function Objetivos() {
   return (
-    <section className="bg-[url('/ipen-rln/img/bg-objetivo-gral.png')] bg-cover bg-center  z-10 h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section
+      id="objetivosgenerales"
+      className="bg-[url('/ipen-rln/img/bg-objetivo-gral-mobile.png')] md:bg-[url('/ipen-rln/img/bg-objetivo-gral.png')] bg-[auto_100%] md:bg-cover md:bg-center relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+    >
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="relative z-10 w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 items-center">
           <div className="grid grid-cols-12">
-            <div className="col-span-8 flex flex-col items-end justify-center gap-5">
-              <div className="h-full w-full bg-cover bg-center rounded-lg p-8 flex flex-col ">
+            <div className="col-span-12 md:col-span-8 flex flex-col items-end justify-center gap-5">
+              <div className="h-full w-full bg-cover bg-center rounded-lg p-1 md:p-8 flex flex-col ">
                 <h1 className="text-3xl font-bold text-gray-800 mb-4">
                   Objetivo General{" "}
                 </h1>
@@ -22,7 +25,7 @@ export default function Objetivos() {
                   </strong>
                 </p>
               </div>
-              <div className="h-full w-full bg-cover bg-center rounded-lg p-8 flex flex-col ">
+              <div className="h-full w-full bg-cover bg-center rounded-lg p-1 md:p-8 flex flex-col ">
                 <h1 className="text-3xl font-bold text-gray-800 mb-4">
                   Objetivos especificos:
                 </h1>
@@ -49,7 +52,7 @@ export default function Objetivos() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col col-span-4 justify-center h-[60vh] w-10/12 mx-auto"></div>
+            <div className="flex flex-col md:col-span-4 justify-center h-[20vh] md:h-[60vh] w-10/12 mx-auto"></div>
           </div>
         </div>
       </div>

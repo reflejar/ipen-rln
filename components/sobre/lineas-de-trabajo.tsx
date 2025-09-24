@@ -28,9 +28,9 @@ export default function LineasTrabajo() {
         <div className="w-10/12 mx-auto grid lg:grid-cols-4 gap-12 items-center mb-20">
           {/* Text Content */}
           {lineas.map((linea, idx) => (
-            <div className="text-center lg:text-left ">
+            <div key={idx} className="text-center">
               <p
-                className={`bg-[url('/ipen-rln/img/frame.png')] px-10 py-16 text-5xl md:text-6xl text-center mb-8 max-w-2xl mx-auto lg:mx-0 font-extrabold ${linea.color}`}
+                className={`bg-[url('/ipen-rln/img/frame.png')] w-2/3 md:w-full md:px-10 py-16 text-5xl md:text-6xl text-center mb-8 max-w-2xl mx-auto lg:mx-0 font-extrabold ${linea.color}`}
                 style={{ backgroundSize: "100% 100%" }}
               >
                 {idx + 1}
