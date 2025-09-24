@@ -25,7 +25,7 @@ export default function Vidas() {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <div className="p-20 text-left">
+                <div className="p-10 md:p-20 text-left">
                   <h3 className="text-2xl md:text-5xl  mb-5">
                     Miles de vidas interrumpidas
                   </h3>
