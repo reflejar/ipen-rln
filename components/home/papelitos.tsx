@@ -38,7 +38,7 @@ export default function Papelitos() {
                 }}
               >
                 <div className="relative w-full">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl w-9/12">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-base md:text-4xl w-9/12">
                     {papel.text}
                   </div>
                   <Image

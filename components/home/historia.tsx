@@ -6,7 +6,7 @@ export default function Historia() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 items-center">
-            <div className="flex items-center justify-center h-[60vh] w-[60vw]">
+            <div className="flex items-center justify-center h-[60vh] md:w-[60vw]">
               <div className="h-full bg-cover bg-center rounded-lg p-8 flex flex-col items-center justify-center text-center">
                 <h1 className="text-xl font-bold text-gray-800">
                   Esta historia no la que te contaron...
