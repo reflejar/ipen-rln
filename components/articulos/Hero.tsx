@@ -11,13 +11,10 @@ export default function Hero() {
         <div>
           {/* Text Content */}
           <div className="text-center lg:text-left flex flex-col items-center justify-center">
-            <h1 className="text-2xl md:text-3xl leading-tight mb-4 text-center">
-              Articulos
-            </h1>
-            <p className="text-4xl md:text-4xl font-semibold mb-8 max-w-4xl text-center mx-auto lg:mx-0">
+            <h1 className="text-4xl md:text-4xl font-semibold mb-8 max-w-4xl text-center mx-auto lg:mx-0">
               Historias reales que devuelven a las personas su voz y
               complejidad.
-            </p>
+            </h1>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">

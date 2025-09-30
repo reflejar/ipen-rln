@@ -3,7 +3,7 @@ title: "Soñar desde la resistencia"
 author: "Estudiante anónimo"
 description: "Dejamos Nicaragua con una mochila y muchas dudas. Lo que no dejamos fue la esperanza de reconstruirnos y seguir soñando."
 image: "/img/articulos/obs-fondo1.png"
-date: "11-2022"
+date: "2025-09-10"
 ---
 
 # Ante semel est tamen

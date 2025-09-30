@@ -29,7 +29,10 @@ export default function CardArticle({ article }: { article: any }) {
             />
           </div>
           <div className="p-6 pt-1">
-            <p className="text-right font-light text-sm">{article.date}</p>
+            <p className="text-right font-light text-sm">
+              {" "}
+              {new Intl.DateTimeFormat("es-AR").format(new Date(article.date))}
+            </p>
             <CardTitle className="mt-3">{article.title}</CardTitle>
             <CardDescription>{article.description}</CardDescription>
           </div>
