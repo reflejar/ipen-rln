@@ -1,5 +1,4 @@
 import Markdown from "markdown-to-jsx";
-import getArticleMetadata from "@/utils/getArticleMetadata";
 import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
@@ -13,37 +12,31 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  getStoryblokApi,
+  ISbStoriesParams,
+  ISbStory,
+  ISbStoryParams,
+  StoryblokServerComponent,
+} from "@storyblok/react/rsc";
+import { notFound } from "next/navigation";
+import { format } from "date-fns";
+import { log } from "console";
 
-function getArticleContent(slug: string) {
-  const folder = "articulos/";
-  const file = folder + slug + ".md";
-  const content = fs.readFileSync(file, "utf-8");
-
-  const matterResult = matter(content);
-  return matterResult;
+export async function generateStaticParams() {
+  const articles = await fetchData();
+  return articles.data.stories.map((article: any) => {
+    return { slug: article.slug };
+  });
 }
 
-export const generateStaticParams = async () => {
-  const articles = getArticleMetadata("articulos");
-  return articles.map((article) => ({
-    slug: article.slug,
-  }));
-};
-
-export async function generateMetadata({
+export default async function Articulo({
   params,
 }: {
   params: { slug: string };
 }) {
-  const id = params?.slug ? " · " + params?.slug : "";
-  return {
-    title: " Reescribiendo Narrativas " + id.replace("_", " "),
-  };
-}
-
-export default function Articulo(props: { params: { slug: string } }) {
-  const slug = props.params.slug;
-  const article = getArticleContent(slug);
+  const data = await fetchArticleBySlug(params.slug);
+  const { name, slug, content, first_published_at, tag_list } = data.data.story;
 
   return (
     <div className="md:pt-[calc(theme(height.nav)+1.5rem)] pt-[calc(theme(height.navMobile)+1.5rem)] bg-[url('/img/bg-articulo.png')] bg-contain bg-no-repeat bg-top">
@@ -63,23 +56,23 @@ export default function Articulo(props: { params: { slug: string } }) {
         height={0}
         className="w-10/12 mx-auto rounded-3xl max-h-64 object-cover"
         sizes="100vw"
-        src={article.data.image}
-        alt={article.data.slug}
+        src={content.Header.filename}
+        alt={slug}
       />
       <article className="h-screen relative min-h-screen  overflow-hidden pt-8 w-10/12 mx-auto flex flex-col-reverse md:flex-row justify-between">
         <div className="w-9/12">
           <h1 className="text-2xl md:text-3xl font-semibold mb-8 max-w-4xl mx-auto lg:mx-0">
-            {article.data.title}
+            {content.Title}
           </h1>
-          <Markdown className="prose text-black text-justify">
-            {article.content}
-          </Markdown>
+          {content.Body.content.map((blok) => (
+            <StoryblokServerComponent blok={blok} key={blok._uid} />
+          ))}
         </div>
         <div className="md:text-right flex flex-col gap-4">
           <div className="mb-3">
             <p className="uppercase font-bold mb-2">author</p>
             <p className="bg-violet-300 px-3 py-1 rounded-full text-center">
-              {article.data.author}
+              {content.authors}
             </p>
           </div>
           <div className="mb-3">
@@ -89,7 +82,7 @@ export default function Articulo(props: { params: { slug: string } }) {
                 day: "2-digit",
                 month: "long",
                 year: "numeric",
-              }).format(new Date(article.data.date))}
+              }).format(new Date(first_published_at))}
             </p>
           </div>
           <div className="mb-3">
@@ -112,7 +105,7 @@ export default function Articulo(props: { params: { slug: string } }) {
               <a
                 href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
                   `https://reescribiendonarrativas.org/articulos/${slug}`
-                )}&text=${encodeURIComponent(article.data.title)}`}
+                )}&text=${encodeURIComponent(content.Title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 p-2 rounded-full hover:bg-green-600 transition "
@@ -122,7 +115,7 @@ export default function Articulo(props: { params: { slug: string } }) {
               <a
                 href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
                   `https://reescribiendonarrativas.org/articulos/${slug}`
-                )}&title=${encodeURIComponent(article.data.title)}`}
+                )}&title=${encodeURIComponent(content.Title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 p-2 rounded-full hover:bg-green-600 transition "
@@ -140,3 +133,35 @@ export default function Articulo(props: { params: { slug: string } }) {
     </div>
   );
 }
+
+const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
+  const storyblokApi = getStoryblokApi();
+
+  let sbParams: ISbStoryParams = { version: "published" };
+  const article = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+
+  if (!article) notFound();
+  return article;
+};
+
+const fetchData = async () => {
+  const storyblokApi = getStoryblokApi();
+
+  let sbParams: ISbStoriesParams = {
+    version: "published",
+    excluding_fields: "body,_editable,_uid",
+    sort_by: "created_at:desc",
+  };
+  return await storyblokApi.get(`cdn/stories`, sbParams);
+};
+
+// const mapAuthors = (authors: any) => {
+//     let authorsString = ''
+//     authors.forEach((author: { name: string }, i: number) => {
+//         if (authors.length > 1 && i + 2 < authors.length) authorsString = `${authorsString}${author.name}, `
+//         else if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name} `
+//         else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
+//         else authorsString = `${authorsString}${author.name}`
+//     })
+//     return authorsString
+// }

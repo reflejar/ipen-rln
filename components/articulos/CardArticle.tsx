@@ -24,22 +24,19 @@ export default function CardArticle({ article }: { article: any }) {
               height={0}
               className="w-full"
               sizes="100vw"
-              src={article.image}
+              src={article.content.Header?.filename}
               alt={article.slug}
             />
           </div>
           <div className="p-6 pt-1">
-            <p className="text-right font-light text-sm">
-              {" "}
-              {new Intl.DateTimeFormat("es-AR").format(new Date(article.date))}
-            </p>
-            <CardTitle className="mt-3">{article.title}</CardTitle>
-            <CardDescription>{article.description}</CardDescription>
+            <p className="text-right font-light text-sm"> </p>
+            <CardTitle className="mt-3">{article.content.Title}</CardTitle>
+            <CardDescription>{article.content.Brief}</CardDescription>
           </div>
         </Link>
       </CardHeader>
       <CardFooter>
-        <Badge variant="secondary">{article.author}</Badge>
+        <Badge variant="secondary">{article.content.author}</Badge>
       </CardFooter>
     </Card>
   );

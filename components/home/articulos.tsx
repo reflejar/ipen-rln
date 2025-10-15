@@ -1,4 +1,3 @@
-import getArticleMetadata from "@/utils/getArticleMetadata";
 import {
   Card,
   CardContent,
@@ -10,6 +9,8 @@ import {
 import Image from "next/image";
 import { Button } from "../ui/button";
 import ArticleCard from "./articulo-card";
+import { getStoryblokApi, ISbStoriesParams } from "@storyblok/react/rsc";
+
 import {
   Carousel,
   CarouselContent,
@@ -18,8 +19,8 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 
-export default function Articulos() {
-  const articleMetadata = getArticleMetadata("articulos");
+export default async function Articulos() {
+  const data = await fetchData();
 
   return (
     <section className="bg-violet-300">
@@ -39,10 +40,10 @@ export default function Articulos() {
               align: "center",
             }}
             orientation="vertical"
-            className="w-full "
+            className="w-full cursor-grab active:cursor-grabbing"
           >
             <CarouselContent className="-mt-1 h-[500px]">
-              {articleMetadata.map((article, idx) => (
+              {data.data.stories.map((article, idx) => (
                 <CarouselItem key={idx} className="pt-1 md:basis-1/2">
                   <div className="p-1">
                     <ArticleCard article={article} idx={idx} />
@@ -58,3 +59,14 @@ export default function Articulos() {
     </section>
   );
 }
+
+const fetchData = async () => {
+  const storyblokApi = getStoryblokApi();
+
+  let sbParams: ISbStoriesParams = {
+    version: "published",
+    excluding_fields: "body,_editable,_uid",
+    sort_by: "created_at:desc",
+  };
+  return await storyblokApi.get(`cdn/stories`, sbParams);
+};

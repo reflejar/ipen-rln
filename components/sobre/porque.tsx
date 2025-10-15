@@ -1,37 +1,53 @@
 export default function PorQue() {
   return (
-    <section className="bg-[url('/img/bg-papel.png')] bg-cover bg-center bg-no-repeat  -my-20 z-20 h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center overflow-hidden ">
       {/* Background Geometric Shapes */}
       {/* Content */}
-      <div className="relative z-10 w-7xl mx-auto px-1 sm:px-6 lg:px-8">
-        <div className="grid gap-12 items-center">
-          <div className="flex flex-col md:flex-row justify-center h-[60vh] w-11/12 md:w-10/12 mx-auto gap-10">
-            <div className="h-full md:w-1/2 bg-cover bg-center rounded-lg md:p-8 flex flex-col ">
-              <h1 className="text-4xl font-bold text-gray-800">
-                Reescribiendo la Narrativa
-              </h1>
-              <p className="mt-2 md:mt-10 text-base md:text-lg text-gray-800">
-                En el contexto actual de Nicaragua, la persecución contra la
-                prensa independiente y el cierre de más de 25 universidades han
-                dejado a cientos de jóvenes sin posibilidades de completar sus
-                estudios y sin un futuro profesional claro. Ante este escenario,
-                Reescribiendo la Narrativa surge como una iniciativa para
-                empoderar a la juventud nicaragüense migrante, especialmente en
-                Costa Rica, brindándoles formación práctica en periodismo
-                comunitario, producción colaborativa y redes de apoyo.
-              </p>
-            </div>
-            <div className="h-full md:w-1/2 bg-cover bg-center rounded-lg md:p-8 flex flex-col ">
-              <h1 className="text-4xl font-bold text-gray-800">Por que</h1>
-              <p className="mt-2 md:mt-10 text-base md:text-lg text-gray-800">
-                Porque creemos que el periodismo es una herramienta para
-                recuperar voz, oficio y oportunidades. Queremos que las
-                historias de jóvenes nicaragüenses circulen con rigor, cuidado y
-                veracidad, combatiendo la desinformación y fortaleciendo el
-                derecho a la libertad de expresión.
-              </p>
-            </div>
-          </div>
+
+      <div className="bg-[url('/img/bg-como-empezamos.png')] min-h-screen w-full lg:w-1/2 bg-cover bg-left flex flex-col pt-16">
+        <div className="w-2/4  m-auto">
+          <h1 className="text-4xl font-bold text-gray-800">
+            Sobre el proyecto
+          </h1>
+          <h3>
+            <b>¿Cómo empezamos?</b>
+          </h3>
+          <p className="mt-2 md:mt-10 text-base md:text-lg text-gray-800">
+            Reescribiendo la narrativa nace como
+            <b>
+              respuesta al deterioro en la libertad de prensa, el cierre de
+              espacios cívicos, universidades y organizaciones
+            </b>
+            de la sociedad civil, así como al creciente desplazamiento forzado
+            de jóvenes nicaragüenses hacia Costa Rica. Ante la
+            <b>censura</b> , la <b>criminalización del pensamiento </b>
+            crítico y la <b>desinformación</b> que rodea la crisis sociopolítica
+            de Nicaragua y los flujos migratorios, el proyecto tiene como
+            objetivo <b>empoderar a jóvenes</b> desplazados brindándoles
+            herramientas comunicativas y periodísticas que les permitan ejercer
+            su derecho a informar, contar sus historias,
+            <b>construir sus propias narrativas y combatir la desinformación</b>
+            .
+          </p>
+        </div>
+      </div>
+      <div className="bg-[url('/img/bg-que-buscamos.png')] min-h-screen w-full lg:w-1/2 bg-cover bg-right   flex flex-col pt-16">
+        <div className="w-2/4 m-auto">
+          <h3>
+            <b>¿Qué buscamos?</b>
+          </h3>
+          <p className="mt-2 md:mt-10 text-base md:text-lg text-gray-800">
+            Se impulsa la creación de una
+            <b>Red de Comunicadores Emergentes</b>, como producto estratégico
+            con los siguientes objetivos y resultados esperados.
+            <b>Fomentar la participación de jóvenes nicaragüenses</b> en
+            actividades destinadas a difundir entre otros jóvenes inmigrantes en
+            Costa Rica
+            <b>
+              el uso del periodismo comunitario como herramienta para combatir
+              la desinformación sobre los procesos migratorios.
+            </b>
+          </p>
         </div>
       </div>
     </section>
