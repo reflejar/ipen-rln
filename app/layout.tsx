@@ -1,7 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
+
+import { apiPlugin, storyblokInit } from "@storyblok/react/rsc";
+export const getStoryblokApi = storyblokInit({
+  accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
+  use: [apiPlugin],
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +38,7 @@ export default function RootLayout({
       <body className="font-inter antialiased">
         <Navbar />
         <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
