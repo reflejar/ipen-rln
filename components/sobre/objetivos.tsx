@@ -2,7 +2,7 @@ export default function Objetivos() {
   return (
     <section
       id="objetivosgenerales"
-      className="bg-[url('/ipen-rln/img/bg-objetivo-gral-mobile.png')] md:bg-[url('/ipen-rln/img/bg-objetivo-gral.png')] bg-[auto_100%] md:bg-cover md:bg-center relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+      className="bg-[url('/img/bg-objetivo-gral-mobile.png')] md:bg-[url('/img/bg-objetivo-gral.png')] bg-[auto_100%] md:bg-cover md:bg-center relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
       {/* Background Geometric Shapes */}
       {/* Content */}

@@ -2,7 +2,7 @@
 title: "Soñar desde la resistencia"
 author: "Estudiante anónimo"
 description: "Dejamos Nicaragua con una mochila y muchas dudas. Lo que no dejamos fue la esperanza de reconstruirnos y seguir soñando."
-image: "/ipen-rln/img/articulos/obs-fondo1.png"
+image: "/img/articulos/obs-fondo1.png"
 date: "11-2022"
 ---
 

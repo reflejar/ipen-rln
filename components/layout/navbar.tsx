@@ -16,7 +16,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <div className="">
               <Image
-                src="/ipen-rln/img/logo3_transparent.png"
+                src="/img/logo3_transparent.png"
                 width={0}
                 height={0}
                 className="w-24"

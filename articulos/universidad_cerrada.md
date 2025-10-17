@@ -2,7 +2,7 @@
 title: "Cuando cerraron mi universidad"
 author: "Gabriela"
 description: "Tenía 20 años y estaba a mitad de mi carrera. El cierre de la universidad me dejó sin aulas y sin rumbo, pero no sin voz. Aquí cuento cómo seguimos estudiando en casas prestadas y soñando con graduarnos."
-image: "/ipen-rln/img/articulos/obs-fondo.png"
+image: "/img/articulos/obs-fondo.png"
 date: "11-2022"
 ---
 
