@@ -29,9 +29,9 @@ export default function ArticleCard({ article, idx }: ArticleCardProps) {
       key={article.slug}
     >
       <CardHeader className="md:w-1/2 justify-center items-start">
-        <CardTitle className="text-start">{article.title}</CardTitle>
+        <CardTitle className="text-start">{article.content.Title}</CardTitle>
         <CardDescription className="text-start">
-          {article.description}
+          {article.content.Brief}
         </CardDescription>
         <Button variant="blue" asChild>
           <Link href={`articulos/${article.slug}`}>LEER ARTICULO</Link>
@@ -44,7 +44,7 @@ export default function ArticleCard({ article, idx }: ArticleCardProps) {
             height={0}
             className="w-full"
             sizes="100vw"
-            src={article.image}
+            src={article.content.Header.filename}
             alt={article.slug}
           />
         </div>

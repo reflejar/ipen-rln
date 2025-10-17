@@ -1,60 +1,54 @@
-import Image from "next/image";
+import { BlurFade } from "../ui/blur-fade";
+import { HyperText } from "../ui/hyper-text";
 
-const papeles = [
-  {
-    text: "sum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
-  },
-  {
-    text: "m Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable En",
-  },
-  {
-    text: "model text, and a search for 'lorem ipsum' will uncover many web sites still in their i",
-  },
-  {
-    text: "of text. All the Lorem Ipsum generators on the Internet tend to repeat predefin",
-  },
-];
-
-export default function Papelitos() {
+export default function Statistics2() {
   return (
-    <section className="bg-[url('/ipen-rln/img/bg-fondo.png')]   bg-cover bg-center">
-      {/* Background Geometric Shapes */}
-      <div className="bg-[url('/ipen-rln/img/mancha-1.png')] bg-no-repeat bg-left bg-[length:50%] relative h-[100dvh] flex items-center justify-between overflow-hidden pt-16">
-        {/* Content */}
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 text-center h-[100%] w-full pt-16 flex flex-col justify-between gap-4">
-          <div className="grid gap-6 md:gap-12 items-center">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
-              Esta historia no la que te contaron...
-            </h1>
-          </div>
+    <div className=" flex flex-col justify-between gap-4  px-10">
+      <div className="">
+        <BlurFade
+          inView
+          duration={1}
+          className="text-4xl md:text-5xl font-bold text-gray-800"
+        >
+          <h2>Miles de vidas interrumpidas</h2>
+        </BlurFade>
+      </div>
 
-          <div className="flex items-center justify-center h-[50dvh] relative">
-            {papeles.map((papel, idx) => (
-              <div
-                key={idx}
-                className="absolute  top-64  transition hover:top-auto hover:bottom-0 hover:z-30"
-                style={{
-                  left: `${(idx / 7) * 100}%`, // distribuye entre 0% y 100%
-                }}
-              >
-                <div className="relative w-full">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-base md:text-4xl w-9/12">
-                    {papel.text}
-                  </div>
-                  <Image
-                    src={`/ipen-rln/img/papel${idx + 1}.png`}
-                    alt="papel"
-                    width={0}
-                    height={0}
-                    className="w-full left-0"
-                    sizes="100vw"
-                  ></Image>
-                </div>
+      <div className="flex items-center justify-center h-[50dvh]">
+        <div className="grid grid-cols-1 w-full">
+          <BlurFade inView duration={1} delay={1}>
+            <div className="flex flex-col  min-h-full rounded-lg text-xl font-semibold p-8">
+              <div className="text-2xl md:text-5xl font-extralight ">
+                <h4 className="font-bold text-yellow-500">
+                  <HyperText
+                    // animateOnHover={false}
+                    duration={6000}
+                    startOnView
+                    delay={1000}
+                    characterSet={[
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "6",
+                      "7",
+                      "8",
+                      "9",
+                      "0",
+                    ]}
+                    className="inline text-2xl md:text-5xl "
+                  >
+                    + 20000
+                  </HyperText>
+                </h4>
+                Nicaragüenses buscando
+                <br /> refugio y protección
               </div>
-            ))}
-          </div>
+            </div>
+          </BlurFade>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

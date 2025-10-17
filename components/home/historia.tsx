@@ -1,35 +1,89 @@
+import Image from "next/image";
+import { Highlighter } from "../ui/highlighter";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+
 export default function Historia() {
   return (
-    <section className="bg-[url('/ipen-rln/img/bg-fondo.png')] bg-cover bg-center ">
-      {/* Background Geometric Shapes */}
-      <div className="bg-[url('/ipen-rln/img/bg-historia.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 items-center">
-            <div className="flex items-center justify-center h-[60vh] md:w-[60vw]">
-              <div className="h-full bg-cover bg-center rounded-lg p-8 flex flex-col items-center justify-center text-center">
-                <h1 className="text-xl font-bold text-gray-800">
-                  Esta historia no la que te contaron...
-                </h1>
-                <p className="mt-20 text-lg text-gray-800">
-                  En 2018, una crisis en Nicaragua obligó a miles de jóvenes a
-                  abandonar sus estudios, sus hogares y su país.
-                </p>
-                <p className="mt-4 text-lg text-gray-800">
-                  Desde entonces, enfrentan un desafío doble:{" "}
-                  <b>reconstruir sus vidas</b> mientras lidian con los{" "}
-                  <b>prejuicios</b> y narrativas negativas{" "}
-                  <b>alimentadas por la desinformación.</b>
-                </p>
-                <p className="mt-4 text-lg text-gray-800">
-                  En medio de esas dificultades, sus historias resisten y se
-                  convierten en testimonio vivo de dignidad y perseverancia.
-                </p>
-              </div>
+    <section className="bg-[url('/img/bg-fondo-verde.png')] min-h-screen bg-cover bg-center cursor-grab active:cursor-grabbing">
+      <Carousel className="w-full">
+        <CarouselContent>
+          <CarouselItem className="pl-0">
+            <Image
+              src="/img/home-carousel.png"
+              alt="ipen logo"
+              width={0}
+              height={0}
+              className="hidden lg:block w-full min-h-screen left-0 "
+              sizes="100vw"
+            ></Image>
+            <Image
+              src="/img/home-carousel-mobile.png"
+              alt="ipen logo"
+              width={0}
+              height={0}
+              className="w-full min-h-screen left-0 lg:hidden"
+              sizes="100vw"
+            ></Image>
+          </CarouselItem>
+          <CarouselItem className="pl-0">
+            <Image
+              src="/img/home-carousel-text-mobile.png"
+              alt="ipen logo"
+              width={0}
+              height={0}
+              className="w-full min-h-screen left-0 lg:hidden"
+              sizes="100vw"
+            ></Image>
+            <Image
+              src="/img/home-carousel-text.png"
+              alt="ipen logo"
+              width={0}
+              height={0}
+              className="hidden lg:block w-full min-h-screen left-0 "
+              sizes="100vw"
+            ></Image>
+          </CarouselItem>
+        </CarouselContent>
+      </Carousel>
+      {/* <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 items-center">
+          <div className="flex items-center justify-center h-[60vh] md:w-[60vw]">
+            <div className="h-full bg-cover bg-center rounded-lg p-8 flex flex-col font-medium">
+              <p className="mt-20 text-lg text-gray-800">
+                En 2018, una crisis socioeconómica en Nicaragua <br />
+                obligó a miles de jóvenes a abandonar sus estudios, <br />
+                sus hogares y su país.
+              </p>
+              <p className="mt-4 text-lg text-gray-800">
+                Desde entonces, enfrentan un desafío doble: <br />
+                <b className="font-extrabold">
+                  reconstruir sus vidas mientras lidian con los{" "}
+                </b>{" "}
+                <br />
+                <b className="font-extrabold">
+                  <Highlighter action="highlight" color="#F9F90E">
+                    prejuicios
+                  </Highlighter>{" "}
+                  y narrativas negativas
+                  <Highlighter action="highlight" color="#F9F90E">
+                    alimentadas por
+                  </Highlighter>
+                </b>{" "}
+                <b className="font-extrabold">
+                  <Highlighter action="highlight" color="#F9F90E">
+                    la desinformación.
+                  </Highlighter>
+                </b>
+              </p>
+              <p className="mt-4 text-lg text-gray-800">
+                En medio de esas dificultades, sus historias resisten <br />
+                y se convierten en testimonio vivo de dignidad y <br />
+                perseverancia.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

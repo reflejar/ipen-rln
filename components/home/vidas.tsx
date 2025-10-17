@@ -1,42 +1,83 @@
-export default function Vidas() {
+import { BlurFade } from "../ui/blur-fade";
+import { HyperText } from "../ui/hyper-text";
+
+export default function Statistics() {
   return (
-    <section className="bg-[url('/ipen-rln/img/bg-fondo.png')] h-screen bg-cover bg-center ">
-      {/* Background Geometric Shapes */}
-      <div className="bg-[url('/ipen-rln/img/bg-vidas.png')] bg-no-repeat bg-left-bottom  bg-[length:50%] relative min-h-screen flex items-center justify-between overflow-hidden pt-16">
-        {/* Background Geometric Shapes */}
+    <div className=" flex flex-col justify-between gap-4 px-10">
+      <div className="">
+        <BlurFade
+          inView
+          duration={1}
+          className="text-4xl md:text-5xl font-bold text-gray-800"
+        >
+          <h2>Les robaron las aulas</h2>
+        </BlurFade>
+      </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center min-h-full flex flex-col justify-between gap-4">
-          <div className="grid gap-6 md:gap-12 items-center">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
-              Esta historia no la que te contaron...
-            </h1>
-          </div>
-
-          <div className="flex items-center justify-center h-[50dvh]">
-            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20 w-full">
-              <div className=""></div>
-              <div
-                className="flex flex-col items-center justify-center min-h-full rounded-lg  text-xl font-semibold p-8"
-                style={{
-                  backgroundImage: "url('/ipen-rln/img/con-pin.png')",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              >
-                <div className="p-10 md:p-20 text-left">
-                  <h3 className="text-2xl md:text-5xl  mb-5">
-                    Miles de vidas interrumpidas
-                  </h3>
-                  <h4 className="text-2xl md:text-5xl  mb-5">+200.000</h4>
-                  nicaragüenses buscando refugio y protección
-                </div>
+      <div className="flex items-center justify-center h-[50dvh]">
+        <div className="grid grid-cols-1 w-full">
+          <BlurFade inView duration={1} delay={1}>
+            <div className="flex flex-col  min-h-full rounded-lg text-xl font-semibold p-8">
+              <div className="text-2xl md:text-5xl font-extralight ">
+                <h4 className="font-bold text-yellow-500">
+                  <HyperText
+                    // animateOnHover={false}
+                    duration={4000}
+                    startOnView
+                    delay={1000}
+                    characterSet={[
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "6",
+                      "7",
+                      "8",
+                      "9",
+                      "0",
+                    ]}
+                    className="inline text-2xl md:text-5xl "
+                  >
+                    + 18000
+                  </HyperText>
+                </h4>
+                estudiantes <br /> afectados
               </div>
             </div>
-          </div>
+          </BlurFade>
+          <BlurFade inView duration={1} delay={2}>
+            <div className="flex flex-col  min-h-full rounded-lg text-xl font-semibold p-8">
+              <div className="text-2xl md:text-5xl font-extralight ">
+                <h4 className="font-bold text-blue-500">
+                  <HyperText
+                    // animateOnHover={false}
+                    duration={4000}
+                    startOnView
+                    delay={2000}
+                    characterSet={[
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "6",
+                      "7",
+                      "8",
+                      "9",
+                      "0",
+                    ]}
+                    className="inline text-2xl md:text-5xl "
+                  >
+                    +26
+                  </HyperText>
+                </h4>
+                universidades <br /> cerradas
+              </div>
+            </div>
+          </BlurFade>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

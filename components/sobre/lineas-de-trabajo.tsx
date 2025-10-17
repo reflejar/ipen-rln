@@ -1,52 +1,76 @@
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 const lineas = [
   {
     text: "Formación integral en comunicaciones, periodismo y liderazgo",
-    color: "text-amber-600",
+    image: "bg-formacion",
+    rotation: "-rotate-12",
+    textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 ",
   },
   {
-    text: "Producción colectiva y colaborativa de contenidos.",
-    color: "text-blue-600",
+    text: "Acompañamiento y comunidad de cuidado",
+    image: "bg-acompaniamiento",
+    rotation: "rotate-12",
+    textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-3/4 ",
   },
-  { text: "Acompañamiento y comunidad de cuidado", color: "text-violet-300" },
+  {
+    text: "Producción colectiva  y colaborativa de contenidos.",
+    image: "bg-produccion",
+    rotation: "rotate-12",
+    textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ",
+  },
   {
     text: "Gestión organizativa y planificación participativa",
-    color: "text-yellow-300",
+    image: "bg-gestion",
+    rotation: "-rotate-12",
+    textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ",
   },
 ];
 
 export default function LineasTrabajo() {
   return (
-    <section className="bg-[url('/ipen-rln/img/bg-lineas.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background Geometric Shapes */}
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight mb-4 text-center">
-          Líneas de trabajo
-        </h1>
-        <div className="w-10/12 mx-auto grid lg:grid-cols-4 gap-12 items-center mb-20">
-          {/* Text Content */}
-          {lineas.map((linea, idx) => (
-            <div key={idx} className="text-center">
-              <p
-                className={`bg-[url('/ipen-rln/img/frame.png')] w-2/3 md:w-full md:px-10 py-16 text-5xl md:text-6xl text-center mb-8 max-w-2xl mx-auto lg:mx-0 font-extrabold ${linea.color}`}
-                style={{ backgroundSize: "100% 100%" }}
-              >
-                {idx + 1}
-              </p>
-              <p>{linea.text}</p>
+    <section className="bg-[url('/img/bg-lineas.png')] bg-cover bg-center h-screen relative min-h-screen grid grid-cols-1 md:grid-cols-2 text-center overflow-hidden pt-16">
+      <div className="min-h-full">
+        <div className=" text-white relative">
+          <Image
+            src="/img/bg-lineas-de-trabajo.png"
+            alt="ipen logo"
+            width={0}
+            height={0}
+            className="h-full w-auto md:w-10/12 m-auto"
+            sizes="100vw"
+          ></Image>
+          <div className="absolute px-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+            <h6 className="text-5xl font-extrabold text-shadow-lg/30">
+              <span className="text-3xl">Nuestras</span>
+              <br />
+              Líneas de trabajo
+            </h6>
+            <div className=" mt-4 flex flex-col gap-5">
+              <Button>Quiero ser parte</Button>
+              <Button>Recursos para escritores</Button>
             </div>
-          ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-3 w-3/6 mx-auto">
-          <Button className="w-full" variant="blue">
-            Quiero ser parte
-          </Button>
-          <Button className="w-full" variant="outline">
-            Recursos para escritores
-          </Button>
-        </div>
+        <div></div>
+      </div>
+      <div className="min-h-full grid grid-cols-1 md:grid-cols-2 gap-y-12 items-center">
+        {lineas.map((linea, idx) => (
+          <div className={`relative ${linea.rotation}`} key={idx}>
+            <Image
+              src={`/img/${linea.image}.png`}
+              alt="ipen logo"
+              width={0}
+              height={0}
+              className="h-full w-10/12 m-auto"
+              sizes="100vw"
+            ></Image>
+            <div className={`absolute text-lg ${linea.textPosition}`}>
+              {linea.text}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

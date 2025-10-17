@@ -1,27 +1,31 @@
+import { Highlighter } from "../ui/highlighter";
+
 export default function Hero() {
   return (
-    <section className="bg-[url('/ipen-rln/img/bg-hero.png')] bg-cover bg-center h-screen relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="bg-[url('/img/bg-hero_mobile.png')] md:bg-[url('/img/bg-hero.png')] bg-cover bg-center h-screen relative min-h-screen flex md:items-center justify-center overflow-hidden pt-16">
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 ">
           {/* Text Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl md:text-6xl lg:text-6xl leading-tight mb-4">
-              Jóvenes{" "}
-              <span className="font-black text-black">
-                combatiendo la desinformación
-              </span>
-              <span className="text-violet-600"></span>
-            </h1>
+          <div className="bg-[url('/img/papel-hero-home_mobile.png')] md:bg-[url('/img/papel-hero-home.png')] bg-cover py-24 pl-4 md:pl-10 md:py-48">
+            <div className="text-3xl md:text-5xl font-light">
+              <h1 className="leading-tight mb-2">
+                Jóvenes <span className="text-violet-600"></span>
+              </h1>
+              <h2 className="text-blue-500 mb-2">
+                Combatiendo la desinformación
+              </h2>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-700 mb-6">
-              con periodismo comunitario
-            </h2>
-
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              Jóvenes combatiendo la desinformación con periodismo comunitario
-            </p>
+              <h3 className=" mb-6">
+                <Highlighter action="highlight" color="#F9F90E">
+                  Con periodismo
+                </Highlighter>
+                <Highlighter action="highlight" color="#F9F90E">
+                  comunitario
+                </Highlighter>
+              </h3>
+            </div>
           </div>
         </div>
       </div>
