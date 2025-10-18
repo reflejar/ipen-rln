@@ -64,7 +64,7 @@ export default async function Articulo({
           <h1 className="text-2xl md:text-3xl font-semibold mb-8 max-w-4xl mx-auto lg:mx-0">
             {content.Title}
           </h1>
-          {content.Body.content.map((blok) => (
+          {content.Body.content.map((blok: any) => (
             <StoryblokServerComponent blok={blok} key={blok._uid} />
           ))}
         </div>
@@ -78,11 +78,13 @@ export default async function Articulo({
           <div className="mb-3">
             <p className="uppercase font-bold mb-2">fecha</p>
             <p>
-              {new Intl.DateTimeFormat("es-ES", {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              }).format(new Date(first_published_at))}
+              {first_published_at
+                ? new Intl.DateTimeFormat("es-ES", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                  }).format(new Date(first_published_at))
+                : "Fecha desconocida"}
             </p>
           </div>
           <div className="mb-3">

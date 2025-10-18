@@ -43,7 +43,7 @@ export default async function Articulos() {
             className="w-full cursor-grab active:cursor-grabbing"
           >
             <CarouselContent className="-mt-1 h-[500px]">
-              {data.data.stories.map((article, idx) => (
+              {data.data.stories.map((article: any, idx: any) => (
                 <CarouselItem key={idx} className="pt-1 md:basis-1/2">
                   <div className="p-1">
                     <ArticleCard article={article} idx={idx} />

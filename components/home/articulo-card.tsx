@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Article = {
+  content: any;
   slug: string;
   title: string;
   description: string;
