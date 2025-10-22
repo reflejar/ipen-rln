@@ -10,7 +10,7 @@ export default function ContraNarrativa() {
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="md:hidden">
-        <div className="bg-[url('/img/carousel-contranarrativa1-mobile.png')] bg-cover bg-bottom min-h-screen flex items-center">
+        <div className="bg-[url('/img/carousel-contranarrativa1-mobile.png')] bg-cover bg-bottom min-h-screen flex items-start pt-5">
           <div className="w-10/12 mx-auto">
             <h2 className="text-4xl font-extrabold mb-12">Contra Narrativa</h2>
             <h4 className="text-1xl font-bold mt-10">Misión</h4>
@@ -32,7 +32,7 @@ export default function ContraNarrativa() {
             </p>
           </div>
         </div>
-        <div className="bg-[url('/img/carousel-contranarrativa2-mobile.png')] bg-cover bg-top min-h-screen flex pt-16 items-center">
+        <div className="bg-[url('/img/carousel-contranarrativa2-mobile.png')] bg-cover bg-top min-h-screen flex pt-16 items-end pb-4">
           <div className="w-10/12 mx-auto">
             <h4 className="text-1xl font-bold mt-10">Objetivo general</h4>
             <p className="text-base">

@@ -11,12 +11,16 @@ export default function Footer() {
             Inicio
           </Link>
           <Link href="/articulos" className="hover:text-gray-300">
-            Articulos
+            Artículos
           </Link>
           <Link href="/sobre" className="hover:text-gray-300">
             Sobre nosotros
           </Link>
-          <Link href="#" className="hover:text-gray-300">
+          <Link
+            href="https://form.jotform.com/252871988769079"
+            target="_blank"
+            className="hover:text-gray-300"
+          >
             SUMATE
           </Link>
         </nav>
@@ -38,15 +42,16 @@ export default function Footer() {
                 className="w-auto max-h-20 left-0"
                 sizes="100vw"
               ></Image>
-
-              <Image
-                src="/img/puentes_logo.png"
-                alt="puzzle logo"
-                width={0}
-                height={0}
-                className="w-auto max-h-20 left-0"
-                sizes="100vw"
-              ></Image>
+              <a href="https://www.ipuentes.org/" target="_blank">
+                <Image
+                  src="/img/puentes_logo.png"
+                  alt="puzzle logo"
+                  width={0}
+                  height={0}
+                  className="w-auto max-h-20 left-0"
+                  sizes="100vw"
+                />
+              </a>
             </div>
             <div className="border-t-2 pt-6 md:border-t-0 md:border-l-2 md:pl-6 md:pt-0 text-center">
               <p className=" text-sm text-gray-300">En colaboración con</p>
@@ -67,6 +72,13 @@ export default function Footer() {
         <p className="text-xs text-gray-400">
           Todos los derechos reservados 2025
         </p>
+
+        <Link href="https://docs.google.com/document/d/1PMjFvTlJLunSmYDf5CaqSITpajqtTByW/edit#heading=h.xf99vrl93gtn">
+          Política de privacidad
+        </Link>
+        <Link href="https://docs.google.com/document/d/1PMjFvTlJLunSmYDf5CaqSITpajqtTByW/edit#heading=h.xf99vrl93gtn">
+          Términos y condiciones
+        </Link>
       </div>
     </footer>
   );
