@@ -137,6 +137,7 @@ const Content = ({ document }: { document: ISbStoryData }) => {
             <hr className="border-t-[1px] border-t-gray-300 my-4" />
           ),
           [NODE_IMAGE]: (children: ReactNode, { src, alt, title }) => {
+            if (!src) return null;
             if (!alt) {
               alt = "alternative image description not available";
             }

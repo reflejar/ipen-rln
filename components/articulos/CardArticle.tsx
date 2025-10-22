@@ -45,7 +45,7 @@ export default function CardArticle({ article }: { article: any }) {
         </Link>
       </CardHeader>
       <CardFooter>
-        {article.content.Authors.map((author) => (
+        {article.content.Authors.map((author: any) => (
           <Badge variant="secondary"> author</Badge>
         ))}
       </CardFooter>
