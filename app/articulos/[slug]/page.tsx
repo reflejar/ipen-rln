@@ -58,7 +58,7 @@ export default async function Articulo({
         height={0}
         className="w-10/12 mx-auto rounded-3xl max-h-64 object-cover"
         sizes="100vw"
-        src={content.Header.filename}
+        src={content.Header?.filename || "/img/noFoundImage.png"}
         alt={slug}
       />
       <article className="h-screen relative min-h-screen  overflow-hidden pt-8 w-10/12 mx-auto flex flex-col-reverse md:flex-row justify-between">
@@ -73,7 +73,8 @@ export default async function Articulo({
           <div className="mb-3">
             <p className="uppercase font-bold mb-2">author</p>
             <p className="bg-violet-300 px-3 py-1 rounded-full text-center">
-              {content.authors}
+              {content.authors?.map((author: any) => author).join(", ") ||
+                "Anónimo"}
             </p>
           </div>
           <div className="mb-3">
@@ -157,16 +158,5 @@ const fetchData = async () => {
   };
   return await storyblokApi.get(`cdn/stories`, sbParams);
 };
-
-// const mapAuthors = (authors: any) => {
-//     let authorsString = ''
-//     authors.forEach((author: { name: string }, i: number) => {
-//         if (authors.length > 1 && i + 2 < authors.length) authorsString = `${authorsString}${author.name}, `
-//         else if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name} `
-//         else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
-//         else authorsString = `${authorsString}${author.name}`
-//     })
-//     return authorsString
-// }
 
 const formatDate = (date: string) => format(new Date(date), "dd/MM/yyyy");

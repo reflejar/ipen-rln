@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function CardArticle({ article }: { article: any }) {
   return (
     <Card
-      className="flex flex-col overflow-hidden border-black rounded-xl shadow-[5px_5px_0px_rgba(0,0,0,0.9)] hover:shadow-lg transition-shadow bg-white"
+      className="flex flex-col overflow-hidden border-black rounded-xl shadow-[5px_5px_0px_rgba(0,0,0,0.9)] hover:shadow-lg transition-shadow bg-white max-h-fit"
       key={article.slug}
     >
       <CardHeader className="flex-1  p-0">
@@ -45,7 +45,7 @@ export default function CardArticle({ article }: { article: any }) {
         </Link>
       </CardHeader>
       <CardFooter>
-        {article.content.Authors.map((author: any) => (
+        {article.content.Authors?.map((author: any) => (
           <Badge variant="secondary"> author</Badge>
         ))}
       </CardFooter>
