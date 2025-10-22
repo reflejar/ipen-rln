@@ -4,8 +4,8 @@ export default function PorQue() {
       {/* Background Geometric Shapes */}
       {/* Content */}
 
-      <div className="bg-[url('/img/bg-como-empezamos.png')] min-h-screen w-full lg:w-1/2 bg-cover bg-left flex flex-col pt-16">
-        <div className="w-2/4  m-auto">
+      <div className="bg-[url('/img/bg-como-empezamos.png')] md:min-h-screen w-full lg:w-1/2 bg-cover bg-left flex flex-col md:pt-16">
+        <div className="p-5 md:w-2/4 m-auto">
           <h1 className="text-4xl font-bold text-gray-800">
             Sobre el proyecto
           </h1>
@@ -31,8 +31,8 @@ export default function PorQue() {
           </p>
         </div>
       </div>
-      <div className="bg-[url('/img/bg-que-buscamos.png')] min-h-screen w-full lg:w-1/2 bg-cover bg-right   flex flex-col pt-16">
-        <div className="w-2/4 m-auto">
+      <div className="bg-[url('/img/bg-que-buscamos.png')] md:min-h-screen w-full lg:w-1/2 bg-cover bg-right   flex flex-col md:pt-16">
+        <div className="p-5 md:w-2/4 m-auto">
           <h3>
             <b>¿Qué buscamos?</b>
           </h3>

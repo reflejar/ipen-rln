@@ -8,7 +8,7 @@ export default function Paisita() {
         alt="ipen logo"
         width={0}
         height={0}
-        className="w-full min-h-screen left-0"
+        className="md:w-full w-auto object-cover min-h-[50vh] !md:min-h-screen left-0"
         sizes="100vw"
       ></Image>
     </section>
