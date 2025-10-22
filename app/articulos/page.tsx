@@ -3,7 +3,6 @@ import { getStoryblokApi, ISbStoriesParams } from "@storyblok/react/rsc";
 
 export default async function Articulos() {
   const data = await fetchData();
-  console.log(data.data.stories);
 
   return (
     <div className="md:pt-[calc(theme(height.nav)+1.5rem)] pt-[calc(theme(height.navMobile)+1.5rem)] bg-[url('/img/bg-articulos.png')] bg-contain bg-no-repeat bg-top">

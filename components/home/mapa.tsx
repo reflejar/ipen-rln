@@ -26,11 +26,11 @@ export default function Mapa() {
         {statisticsVisible === 1 ? <Statistics /> : <Statistics2 />}
       </div>
       <div className="w-full md:w-3/5" style={{ maxHeight: "100dvh" }}>
-        <BlurFade inView duration={10}>
+        <BlurFade inView delay={3}>
           <Image
             width={0}
             height={0}
-            className="min-h-screen w-full"
+            className="md:min-h-screen w-full"
             sizes="100vw"
             src="https://image.cevadev.com/xExo0/XipUsIhE19/raw.gif"
             alt="mapa Nicaragua"

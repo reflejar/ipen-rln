@@ -45,7 +45,7 @@ export default function ArticleCard({ article, idx }: ArticleCardProps) {
             height={0}
             className="w-full"
             sizes="100vw"
-            src={article.content.Header.filename}
+            src={article.content.Header?.filename || "/img/noFoundImage.png"}
             alt={article.slug}
           />
         </div>

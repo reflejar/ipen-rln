@@ -33,8 +33,7 @@ export default async function Hero({ articles }: { articles: ISbStoryData[] }) {
           {/* Text Content */}
           <div className="text-center lg:text-left flex flex-col items-center justify-center">
             <h1 className="text-4xl md:text-4xl font-semibold mb-8 max-w-4xl text-center mx-auto lg:mx-0">
-              Historias reales que devuelven a las personas su voz y
-              complejidad.
+              Historias reales que devuelven a las personas su voz y complejidad
             </h1>
           </div>
         </div>
