@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Paisita() {
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     // Observar cuando la sección entra en pantalla
