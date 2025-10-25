@@ -1,61 +1,123 @@
 "use client";
-import { useEffect, useState } from "react";
-import { BlurFade } from "../ui/blur-fade";
-import Statistics2 from "./papelitos";
-import Statistics from "./vidas";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
-export default function Mapa() {
-  const [statisticsVisible, setStatisticsVisible] = useState(1);
-  const [mapVisible, setMapVisible] = useState(1);
+export default function FullscreenVideoSection() {
+  const [visible, setVisible] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState(1);
+  const [sectionHeight, setSectionHeight] = useState(800);
+  const sectionRef = useRef(null);
+  const video1Ref = useRef(null);
+  const video2Ref = useRef(null);
+  const video1MobileRef = useRef(null);
+  const video2MobileRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setStatisticsVisible((prev) => (prev === 1 ? 2 : 1));
-      // setMapVisible((prev) => (prev === 1 ? 2 : 1));
-      // if (mapVisible === 1) setTimeout(() => {}, 1500);
-      // else setMapVisible((prev) => (prev === 1 ? 2 : 1));
-    }, 8000);
+    // Observar cuando la sección entra en pantalla
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setVisible(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
 
-    // Limpieza para evitar fugas de memoria o múltiples intervalos
-    return () => clearInterval(interval);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    setSectionHeight(video1Ref.current?.offsetHeight);
+    if (window.innerWidth < 1024)
+      setSectionHeight(video1MobileRef.current?.offsetHeight);
+    if (visible) {
+      video1Ref.current?.play();
+      video1MobileRef.current?.play();
+    } else {
+      video1Ref.current?.pause();
+      video1MobileRef.current?.pause();
+
+      video2Ref.current?.pause();
+      video2MobileRef.current?.pause();
+      setCurrentVideo(1);
+    }
+  }, [visible]);
+
+  const handleVideoEnd = () => {
+    setCurrentVideo(2);
+    setTimeout(() => {
+      video2Ref.current?.play();
+      video2MobileRef.current?.play();
+    }, 3000);
+  };
+
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center w-full h-full">
-      <div className="w-full md:w-2/5">
-        {statisticsVisible === 1 ? <Statistics /> : <Statistics2 />}
-      </div>
-      <div className="w-full md:w-3/5" style={{ maxHeight: "100dvh" }}>
-        <BlurFade inView delay={3}>
-          <Image
-            width={0}
-            height={0}
-            className="md:min-h-screen w-full"
-            sizes="100vw"
-            src="https://image.cevadev.com/xExo0/XipUsIhE19/raw.gif"
-            alt="mapa Nicaragua"
-          />
-          {/* {statisticsVisible === 1 ? (
-            <Image
-              width={0}
-              height={0}
-              className="min-h-screen w-full"
-              sizes="100vw"
-              src="/img/gifs/Mapa1.gif"
-              alt="mapa Nicaragua"
-            />
-          ) : (
-            <Image
-              width={0}
-              height={0}
-              className="min-h-screen w-full"
-              sizes="100vw"
-              src="/img/gifs/Mapa2.gif"
-              alt="mapa Nicaragua"
-            />
-          )} */}
-        </BlurFade>
-      </div>
-    </div>
+    <section
+      ref={sectionRef}
+      className="w-full  overflow-hidden"
+      style={{ height: sectionHeight + "px" }}
+    >
+      <video
+        ref={video1Ref}
+        autoPlay={false}
+        muted
+        playsInline
+        preload="auto"
+        onEnded={handleVideoEnd}
+        className={`hidden lg:block ${
+          currentVideo === 1
+            ? "w-full opacity-100 max-h-[5000px]"
+            : "opacity-0 max-h-0"
+        }`}
+      >
+        <source src="/img/gifs/mapa1.webm" type="video/webm" />
+      </video>
+      <video
+        ref={video1MobileRef}
+        autoPlay={false}
+        muted
+        playsInline
+        preload="auto"
+        onEnded={handleVideoEnd}
+        className={` lg:hidden mx-auto ${
+          currentVideo === 1
+            ? "min-h-sreen opacity-100 max-h-[5000px]"
+            : "opacity-0 max-h-0"
+        }`}
+      >
+        <source src="/img/gifs/mapa1-mobile.webm" type="video/webm" />
+      </video>
+
+      <video
+        ref={video2Ref}
+        autoPlay={false}
+        muted
+        playsInline
+        preload="auto"
+        className={` hidden lg:block  ${
+          currentVideo === 2
+            ? "w-full opacity-100 max-h-[5000px]"
+            : "opacity-0 max-h-0"
+        }`}
+      >
+        <source src="/img/gifs/mapa2.webm" type="video/webm" />
+      </video>
+      <video
+        ref={video2MobileRef}
+        autoPlay={false}
+        muted
+        playsInline
+        preload="auto"
+        onEnded={handleVideoEnd}
+        className={` lg:hidden mx-auto ${
+          currentVideo === 2
+            ? "min-h-sreen opacity-100 max-h-[5000px]"
+            : "opacity-0 max-h-0"
+        }`}
+      >
+        <source src="/img/gifs/mapa2-mobile.webm" type="video/webm" />
+      </video>
+    </section>
   );
 }
