@@ -6,10 +6,10 @@ export default function FullscreenVideoSection() {
   const [currentVideo, setCurrentVideo] = useState(1);
   const [sectionHeight, setSectionHeight] = useState(800);
   const sectionRef = useRef(null);
-  const video1Ref = useRef(null);
-  const video2Ref = useRef(null);
-  const video1MobileRef = useRef(null);
-  const video2MobileRef = useRef(null);
+  const video1Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
+  const video1MobileRef = useRef<HTMLVideoElement>(null);
+  const video2MobileRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     // Observar cuando la sección entra en pantalla
@@ -28,9 +28,9 @@ export default function FullscreenVideoSection() {
   }, []);
 
   useEffect(() => {
-    setSectionHeight(video1Ref.current?.offsetHeight);
+    setSectionHeight(video1Ref.current?.offsetHeight || 800);
     if (window.innerWidth < 1024)
-      setSectionHeight(video1MobileRef.current?.offsetHeight);
+      setSectionHeight(video1MobileRef.current?.offsetHeight || 800);
     if (visible) {
       video1Ref.current?.play();
       video1MobileRef.current?.play();
