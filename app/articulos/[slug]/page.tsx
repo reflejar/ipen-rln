@@ -41,7 +41,7 @@ export default async function Articulo({
   const { name, slug, content, first_published_at, tag_list } = data.data.story;
 
   return (
-    <div className="md:pt-[calc(theme(height.nav)+3rem)] pt-[calc(theme(height.navMobile)+1.5rem)] bg-[url('/img/bg-articulo.png')] bg-contain bg-no-repeat bg-top">
+    <div className="md:pt-[calc(theme(height.nav)+3rem)] pt-[calc(theme(height.navMobile)+1.5rem)] bg-[url('/img/bg-articulo.webp')] bg-contain bg-no-repeat bg-top">
       <div className="w-10/12 mx-auto mt-5 mb-6">
         <Button
           variant="outline"
@@ -58,7 +58,7 @@ export default async function Articulo({
         height={0}
         className="w-10/12 mx-auto rounded-3xl max-h-64 object-cover"
         sizes="100vw"
-        src={content.Header?.filename || "/img/noFoundImage.png"}
+        src={content.Header?.filename || "/img/noFoundImage.webp"}
         alt={slug}
       />
       <article className="h-screen relative min-h-screen  overflow-hidden pt-8 w-10/12 mx-auto flex flex-col-reverse md:flex-row justify-between">

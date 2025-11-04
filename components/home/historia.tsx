@@ -4,12 +4,12 @@ import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 export default function Historia() {
   return (
-    <section className="bg-[url('/img/bg-fondo-verde.png')] min-h-screen bg-cover bg-center cursor-grab active:cursor-grabbing">
+    <section className="bg-[url('/img/bg-fondo-verde.webp')] min-h-screen bg-cover bg-center cursor-grab active:cursor-grabbing">
       <Carousel className="w-full">
         <CarouselContent>
           <CarouselItem className="pl-0">
             <Image
-              src="/img/home-carousel.png"
+              src="/img/home-carousel.webp"
               alt="ipen logo"
               width={0}
               height={0}
@@ -17,7 +17,7 @@ export default function Historia() {
               sizes="100vw"
             ></Image>
             <Image
-              src="/img/home-carousel-mobile.png"
+              src="/img/home-carousel-mobile.webp"
               alt="ipen logo"
               width={0}
               height={0}
@@ -27,7 +27,7 @@ export default function Historia() {
           </CarouselItem>
           <CarouselItem className="pl-0">
             <Image
-              src="/img/home-carousel-text-mobile.png"
+              src="/img/home-carousel-text-mobile.webp"
               alt="ipen logo"
               width={0}
               height={0}
@@ -35,7 +35,7 @@ export default function Historia() {
               sizes="100vw"
             ></Image>
             <Image
-              src="/img/home-carousel-text.png"
+              src="/img/home-carousel-text.webp"
               alt="ipen logo"
               width={0}
               height={0}

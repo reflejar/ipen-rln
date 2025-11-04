@@ -5,12 +5,12 @@ export default function ContraNarrativa() {
   return (
     <section
       id="contranarrativa"
-      className="bg-[url('/img/bg-contra-narrativa.png')]  h-screen min-h-screen flex items-center justify-center overflow-hidden "
+      className="bg-[url('/img/bg-contra-narrativa.webp')]  h-screen min-h-screen flex items-center justify-center overflow-hidden "
     >
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="md:hidden">
-        <div className="bg-[url('/img/carousel-contranarrativa1-mobile.png')] bg-cover bg-bottom min-h-screen flex items-start pt-5">
+        <div className="bg-[url('/img/carousel-contranarrativa1-mobile.webp')] bg-cover bg-bottom min-h-screen flex items-start pt-5">
           <div className="w-10/12 mx-auto">
             <h2 className="text-4xl font-extrabold mb-12">Contra Narrativa</h2>
             <h4 className="text-1xl font-bold mt-10">Misión</h4>
@@ -32,7 +32,7 @@ export default function ContraNarrativa() {
             </p>
           </div>
         </div>
-        <div className="bg-[url('/img/carousel-contranarrativa2-mobile.png')] bg-cover bg-top min-h-screen flex pt-16 items-end pb-4">
+        <div className="bg-[url('/img/carousel-contranarrativa2-mobile.webp')] bg-cover bg-top min-h-screen flex pt-16 items-end pb-4">
           <div className="w-10/12 mx-auto">
             <h4 className="text-1xl font-bold mt-10">Objetivo general</h4>
             <p className="text-base">
@@ -74,7 +74,7 @@ export default function ContraNarrativa() {
       <Carousel className="hidden md:block w-full">
         <CarouselContent>
           <CarouselItem className="pl-0">
-            <div className="bg-[url('/img/carousel-contranarrativa1.png')] bg-cover bg-right min-h-screen flex pt-16 items-center">
+            <div className="bg-[url('/img/carousel-contranarrativa1.webp')] bg-cover bg-right min-h-screen flex pt-16 items-center">
               <div className="w-8/12 ml-36 mr-auto">
                 <h2 className="text-8xl font-extrabold mb-24">
                   Contra Narrativa
@@ -100,7 +100,7 @@ export default function ContraNarrativa() {
             </div>
           </CarouselItem>
           <CarouselItem className="pl-0">
-            <div className="bg-[url('/img/carousel-contranarrativa2.png')] bg-cover bg-left min-h-screen flex pt-16 items-center">
+            <div className="bg-[url('/img/carousel-contranarrativa2.webp')] bg-cover bg-left min-h-screen flex pt-16 items-center">
               <div className="w-8/12 mr-10 ml-auto">
                 <h4 className="text-3xl font-bold mt-10">Objetivo general</h4>
                 <p className="text-2xl">

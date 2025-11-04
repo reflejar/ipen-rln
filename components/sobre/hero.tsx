@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 export default function HeroAbout() {
   return (
-    <section className="bg-[url('/img/bg-fondo-verde.png')] bg-cover bg-center bg-no-repeat relative min-h-screen flex items-end md:items-center justify-center overflow-hidden ">
+    <section className="bg-[url('/img/bg-fondo-verde.webp')] bg-cover bg-center bg-no-repeat relative min-h-screen flex items-end md:items-center justify-center overflow-hidden ">
       {/* Background Geometric Shapes */}
 
       {/* Background Geometric Shapes */}
@@ -21,7 +21,7 @@ export default function HeroAbout() {
         </div>
         <div className="w-full md:w-8/12 flex items-center">
           <Image
-            src="/img/image_hero_about.png"
+            src="/img/image_hero_about.webp"
             alt="ipen logo"
             width={0}
             height={0}
@@ -29,7 +29,7 @@ export default function HeroAbout() {
             sizes="100vw"
           ></Image>
           <Image
-            src="/img/image_hero_about_mobile.png"
+            src="/img/image_hero_about_mobile.webp"
             alt="ipen logo"
             width={0}
             height={0}
