@@ -73,12 +73,8 @@ export default function Footer() {
           Todos los derechos reservados 2025
         </p>
 
-        <Link href="https://docs.google.com/document/d/1PMjFvTlJLunSmYDf5CaqSITpajqtTByW/edit#heading=h.xf99vrl93gtn">
-          Política de privacidad
-        </Link>
-        <Link href="https://docs.google.com/document/d/1PMjFvTlJLunSmYDf5CaqSITpajqtTByW/edit#heading=h.xf99vrl93gtn">
-          Términos y condiciones
-        </Link>
+        <Link href="#">Política de privacidad</Link>
+        <Link href="#">Términos y condiciones</Link>
       </div>
     </footer>
   );
