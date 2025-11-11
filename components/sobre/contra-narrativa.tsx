@@ -76,7 +76,7 @@ export default function ContraNarrativa() {
           <CarouselItem className="pl-0">
             <div className="bg-[url('/img/carousel-contranarrativa1.png')] bg-cover bg-right min-h-screen flex pt-16 items-center">
               <div className="w-8/12 ml-36 mr-auto">
-                <h2 className="text-8xl font-extrabold mb-24">
+                <h2 className="text-7xl font-extrabold mb-24">
                   Contra Narrativa
                 </h2>
                 <h4 className="text-3xl font-bold mt-10">Misión</h4>
