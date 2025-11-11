@@ -2,9 +2,9 @@ import { Button } from "../ui/button";
 
 export default function QueEs() {
   return (
-    <section className="bg-[url('/img/logo-papel.png')] bg-[auto_40%] bg-no-repeat bg-position-[center_top_1rem] md:bg-right">
+    <section className="bg-[url('/img/logo-papel.webp')] bg-[auto_40%] bg-no-repeat bg-position-[center_top_1rem] md:bg-right">
       {/* Background Geometric Shapes */}
-      <div className="bg-[url('/img/circulos.png')] bg-cover bg-center h-screen relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pt-16 pb-20">
+      <div className="bg-[url('/img/circulos.webp')] bg-cover bg-center h-screen relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pt-16 pb-20">
         {/* Background Geometric Shapes */}
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

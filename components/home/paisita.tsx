@@ -37,7 +37,7 @@ export default function Paisita() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[url('/img/bg-paisita.png')] bg-cover min-h-screen bg-center flex justify-center items-center "
+      className="bg-[url('/img/bg-paisita.webp')] bg-cover min-h-screen bg-center flex justify-center items-center "
     >
       <video
         ref={videoRef}

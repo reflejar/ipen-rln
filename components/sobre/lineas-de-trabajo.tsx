@@ -30,9 +30,11 @@ const lineas = [
 
 export default function LineasTrabajo() {
   return (
+
     <section className="bg-[url('/img/bg-lineas-mobile.png')] md:bg-[url('/img/bg-lineas.png')] bg-cover bg-center h-screen relative min-h-screen grid grid-cols-1 md:grid-cols-12 text-center overflow-hidden pt-16">
       <div className="min-h-full flex items-center justify-center col-span-5">
         <div className=" text-white relative bg-[url('/img/bg-lineas-de-trabajo.png')] py-40 bg-cover bg-no-repeat bg-center">
+
           <div className="px-20 ">
             <h6 className="text-5xl font-extrabold text-shadow-lg/30 ">
               <span className="text-3xl">Nuestras</span>
@@ -47,6 +49,7 @@ export default function LineasTrabajo() {
         </div>
         <div></div>
       </div>
+
       <div className="hidden bg-[url('/img/bg-produccion.png')]"></div>
       <div className="hidden bg-[url('/img/bg-gestion.png')]"></div>
       <div className="hidden bg-[url('/img/bg-formacion.png')]"></div>
@@ -61,6 +64,7 @@ export default function LineasTrabajo() {
               className={`absolute text-lg font-bold ${linea.textPosition} `}
               dangerouslySetInnerHTML={{ __html: linea.text }}
             ></div>
+
           </div>
         ))}
       </div>
