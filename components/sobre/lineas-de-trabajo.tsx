@@ -3,49 +3,41 @@ import { Button } from "../ui/button";
 
 const lineas = [
   {
-    text: "Formación integral en comunicaciones, periodismo y liderazgo",
+    text: "Formación integral <br/>en comunicaciones, <br/>periodismo y liderazgo",
     image: "bg-formacion",
     rotation: "-rotate-12",
-    textPosition: "pt-10 px-10",
+    textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pt-10",
   },
   {
-    text: "Acompañamiento y comunidad de cuidado",
+    text: "Acompañamiento <br/>y comunidad <br/>de cuidado",
     image: "bg-acompaniamiento",
     rotation: "rotate-12",
-    textPosition: "pb-20 md:pb-12 px-10",
+    textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  pb-10",
   },
   {
-    text: "Producción colectiva  y colaborativa de contenidos.",
+    text: "Producción <br/> colectiva <br/>y colaborativa <br/>de contenidos.",
     image: "bg-produccion",
     rotation: "rotate-12",
-    textPosition: " pt-14 md:pt-10 px-10",
+    textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pt-14",
   },
   {
-    text: "Gestión organizativa y planificación participativa",
+    text: "Gestión <br/>organizativa y <br/>planificación <br/>participativa",
     image: "bg-gestion",
     rotation: "-rotate-12",
-    textPosition: "p-10",
+    textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ",
   },
 ];
 
 export default function LineasTrabajo() {
   return (
-    <section className="bg-[url('/img/bg-lineas.png')] bg-cover bg-center h-screen relative min-h-screen grid grid-cols-1 md:grid-cols-2 text-center overflow-hidden pt-16">
-      <div className="min-h-full">
+    <section className="bg-[url('/img/bg-lineas-mobile.png')] md:bg-[url('/img/bg-lineas.png')] bg-cover bg-center h-screen relative min-h-screen grid grid-cols-1 md:grid-cols-12 text-center overflow-hidden pt-16">
+      <div className="min-h-full flex items-center justify-center col-span-5">
         <div className=" text-white relative bg-[url('/img/bg-lineas-de-trabajo.png')] py-40 bg-cover bg-no-repeat bg-center">
-          {/* <Image
-            src="/img/bg-lineas-de-trabajo.png"
-            alt="ipen logo"
-            width={0}
-            height={0}
-            className="h-full w-auto md:w-10/12 m-auto"
-            sizes="100vw"
-          ></Image> */}
           <div className="px-20 ">
-            <h6 className="text-5xl font-extrabold text-shadow-lg/30">
+            <h6 className="text-5xl font-extrabold text-shadow-lg/30 ">
               <span className="text-3xl">Nuestras</span>
               <br />
-              Líneas de trabajo
+              Líneas de <br /> trabajo
             </h6>
             <div className=" mt-4 flex flex-col gap-5">
               <Button>Quiero ser parte</Button>
@@ -59,21 +51,16 @@ export default function LineasTrabajo() {
       <div className="hidden bg-[url('/img/bg-gestion.png')]"></div>
       <div className="hidden bg-[url('/img/bg-formacion.png')]"></div>
       <div className="hidden bg-[url('/img/bg-acompaniamiento.png')]"></div>
-      <div className="min-h-full grid grid-cols-1 md:grid-cols-2 gap-y-12 items-center">
+      <div className="min-h-full grid grid-cols-1 md:grid-cols-2 gap-y-12 items-center col-span-7">
         {lineas.map((linea, idx) => (
           <div
-            className={`relative min-h-full flex p-10 items-center bg-[url('/img/${linea.image}.png')] bg-[auto_100%] md:bg-[auto_70%] bg-no-repeat bg-center ${linea.rotation}`}
+            className={`relative min-h-full flex p-32 md:p-0 items-center bg-[url('/img/${linea.image}.png')] bg-[auto_100%] md:bg-[auto_60%] bg-no-repeat bg-center ${linea.rotation}`}
             key={idx}
           >
-            {/* <Image
-              src={`/img/${linea.image}.png`}
-              alt="ipen logo"
-              width={0}
-              height={0}
-              className="h-full w-10/12 m-auto"
-              sizes="100vw"
-            ></Image> */}
-            <div className={`text-lg ${linea.textPosition}`}>{linea.text}</div>
+            <div
+              className={`absolute text-lg ${linea.textPosition} `}
+              dangerouslySetInnerHTML={{ __html: linea.text }}
+            ></div>
           </div>
         ))}
       </div>
