@@ -1,16 +1,26 @@
 import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 
 export default function ContraNarrativa() {
   return (
     <section
       id="contranarrativa"
-      className="bg-[url('/img/bg-contra-narrativa.webp')]  h-screen min-h-screen flex items-center justify-center overflow-hidden "
+
+      className="  h-screen min-h-screen flex items-center justify-center overflow-hidden "
+
     >
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="md:hidden">
-        <div className="bg-[url('/img/carousel-contranarrativa1-mobile.webp')] bg-cover bg-bottom min-h-screen flex items-start pt-5">
+
+        <div className="bg-[url('/img/carousel-contranarrativa1-mobile.png')] bg-cover bg-bottom min-h-screen flex items-start pt-24">
+
           <div className="w-10/12 mx-auto">
             <h2 className="text-4xl font-extrabold mb-12">Contra Narrativa</h2>
             <h4 className="text-1xl font-bold mt-10">Misión</h4>
@@ -76,7 +86,7 @@ export default function ContraNarrativa() {
           <CarouselItem className="pl-0">
             <div className="bg-[url('/img/carousel-contranarrativa1.webp')] bg-cover bg-right min-h-screen flex pt-16 items-center">
               <div className="w-8/12 ml-36 mr-auto">
-                <h2 className="text-8xl font-extrabold mb-24">
+                <h2 className="text-7xl font-extrabold mb-24">
                   Contra Narrativa
                 </h2>
                 <h4 className="text-3xl font-bold mt-10">Misión</h4>
@@ -143,6 +153,8 @@ export default function ContraNarrativa() {
             </div>
           </CarouselItem>
         </CarouselContent>
+        <CarouselPrevious className="left-5" />
+        <CarouselNext className="right-5" />
       </Carousel>
     </section>
   );

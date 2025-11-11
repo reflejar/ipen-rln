@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-6 left-0 right-0 mx-auto w-10/12 bg-white border-b-2 z-50  shadow-[5px_5px_0px_rgba(0,0,0,0.9)]  md:h-nav ${
+      className={`fixed top-3 left-0 right-0 mx-auto w-10/12 bg-white border-b-2 z-50  shadow-[5px_5px_0px_rgba(0,0,0,0.9)]  md:h-nav ${
         menuOpen ? "rounded-3xl" : "rounded-full h-navMobile"
       } flex items-center`}
     >
