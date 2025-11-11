@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 my-10 md:my-0">
           {/* Text Content */}
           <div className="bg-[url('/img/papel-hero-home_mobile.png')] md:bg-[url('/img/papel-hero-home.png')] bg-contain bg-no-repeat py-24 pl-4 md:pl-10 md:py-48">
-            <div className="text-1xl sm:text-3xl md:text-5xl ">
+            <div className="text-2xl sm:text-3xl md:text-5xl ">
               <h1 className="leading-tight mb-2">
                 Jóvenes <span className="text-violet-600"></span>
               </h1>

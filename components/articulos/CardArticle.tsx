@@ -10,10 +10,16 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function CardArticle({ article }: { article: any }) {
+export default function CardArticle({
+  article,
+  className,
+}: {
+  article: any;
+  className?: String;
+}) {
   return (
     <Card
-      className="flex flex-col overflow-hidden border-black rounded-xl shadow-[5px_5px_0px_rgba(0,0,0,0.9)] hover:shadow-lg transition-shadow bg-white max-h-fit"
+      className={`flex flex-col overflow-hidden border-black rounded-xl shadow-[5px_5px_0px_rgba(0,0,0,0.9)] hover:shadow-lg transition-shadow bg-white max-h-fit ${className}`}
       key={article.slug}
     >
       <CardHeader className="flex-1  p-0">
