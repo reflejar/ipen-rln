@@ -58,7 +58,7 @@ export default function LineasTrabajo() {
             key={idx}
           >
             <div
-              className={`absolute text-lg ${linea.textPosition} `}
+              className={`absolute text-lg font-bold ${linea.textPosition} `}
               dangerouslySetInnerHTML={{ __html: linea.text }}
             ></div>
           </div>
