@@ -1,11 +1,17 @@
 import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 
 export default function ContraNarrativa() {
   return (
     <section
       id="contranarrativa"
-      className="bg-[url('/img/bg-contra-narrativa.png')]  h-screen min-h-screen flex items-center justify-center overflow-hidden "
+      className="  h-screen min-h-screen flex items-center justify-center overflow-hidden "
     >
       {/* Background Geometric Shapes */}
       {/* Content */}
@@ -143,6 +149,8 @@ export default function ContraNarrativa() {
             </div>
           </CarouselItem>
         </CarouselContent>
+        <CarouselPrevious className="left-5" />
+        <CarouselNext className="right-5" />
       </Carousel>
     </section>
   );
