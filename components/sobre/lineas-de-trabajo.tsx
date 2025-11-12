@@ -52,7 +52,7 @@ export default function LineasTrabajo() {
       <div className="hidden bg-[url('/img/bg-gestion.webp')]"></div>
       <div className="hidden bg-[url('/img/bg-formacion.webp')]"></div>
       <div className="hidden bg-[url('/img/bg-acompaniamiento.webp')]"></div>
-      <div className="min-h-full grid grid-cols-1 md:grid-cols-2 gap-y-12 items-center col-span-7">
+      <div className="min-h-full grid grid-cols-1 md:grid-cols-2 gap-y-12 items-center col-span-7 pb-10">
         {lineas.map((linea, idx) => (
           <div
             className={`relative min-h-full flex p-32 md:p-0 items-center bg-[url('/img/${linea.image}.webp')] bg-[auto_100%] md:bg-[auto_60%] bg-no-repeat bg-center ${linea.rotation}`}
