@@ -29,7 +29,7 @@ export default async function Articulos() {
               align: "center",
             }}
             // orientation="vertical"
-            className="w-full cursor-grab active:cursor-grabbing"
+            className="w-full md:w-9/12 mx-auto cursor-grab active:cursor-grabbing"
           >
             <CarouselContent className="-mt-1 h-[500px]">
               {data.data.stories.map((article: any, idx: any) => (
