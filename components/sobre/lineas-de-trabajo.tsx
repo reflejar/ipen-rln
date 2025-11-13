@@ -5,13 +5,14 @@ const lineas = [
   {
     text: "Formación integral <br/>en comunicaciones, <br/>periodismo y liderazgo",
     image: "bg-formacion",
-    rotation: "-rotate-12",
+    rotation: "-rotate-12 -translate-y-10",
     textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pt-10",
   },
   {
     text: "Acompañamiento <br/>y comunidad <br/>de cuidado",
     image: "bg-acompaniamiento",
-    rotation: "rotate-12",
+    rotation:
+      "rotate-12 translate-y-10 -translate-x-10 md:translate-x-0 md:translate-y-20",
     textPosition: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  pb-10",
   },
   {
@@ -55,7 +56,7 @@ export default function LineasTrabajo() {
       <div className="min-h-full grid grid-cols-1 md:grid-cols-2 gap-y-12 items-center col-span-7 pb-10">
         {lineas.map((linea, idx) => (
           <div
-            className={`relative min-h-full flex p-32 md:p-0 items-center bg-[url('/img/${linea.image}.webp')] bg-[auto_100%] md:bg-[auto_60%] bg-no-repeat bg-center ${linea.rotation}`}
+            className={`relative min-h-full flex p-32 md:p-0 items-center bg-[url('/img/${linea.image}.webp')] bg-[auto_100%] md:bg-[auto_70%] bg-no-repeat bg-center ${linea.rotation}`}
             key={idx}
           >
             <div
