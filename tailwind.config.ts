@@ -94,6 +94,10 @@ const config: Config = {
       navMobile: "65px",
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    require("tailwindcss-highlights"),
+  ],
 };
 export default config;
