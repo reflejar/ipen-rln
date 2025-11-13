@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className=" relative flex items-center flex-wrap justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="">
+            <Link href="/" className="">
               <Image
                 src="/img/logo3_transparent.png"
                 width={0}
@@ -34,7 +34,7 @@ export default function Navbar() {
                 alt="logo reescribiendo la narrativa"
               />
               {/* <span className="font-bold text-black text-sm">LOGO</span> */}
-            </div>
+            </Link>
           </div>
 
           {/* Mobile menu button */}

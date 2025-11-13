@@ -73,8 +73,8 @@ export default function Footer() {
           Todos los derechos reservados 2025
         </p>
 
-        <Link href="#">Política de privacidad</Link>
-        <Link href="#">Términos y condiciones</Link>
+        <Link href="/politicas-de-privacidad">Política de privacidad</Link>
+        <Link href="/terminos-y-condiciones">Términos y condiciones</Link>
       </div>
     </footer>
   );
