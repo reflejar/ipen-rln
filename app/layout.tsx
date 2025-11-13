@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 import { apiPlugin, storyblokInit } from "@storyblok/react/rsc";
+import LoadingProvider from "./loading";
 export const getStoryblokApi = storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
@@ -36,9 +37,11 @@ export default function RootLayout({
         />
       </head>
       <body className="font-inter antialiased">
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <LoadingProvider>
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </LoadingProvider>
       </body>
     </html>
   );

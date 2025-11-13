@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-3 left-0 right-0 mx-auto w-10/12 bg-white border-b-2 z-50  shadow-[5px_5px_0px_rgba(0,0,0,0.9)]  md:h-nav ${
+      className={`fixed top-3 left-0 right-0 mx-auto w-10/12 bg-white border-b-2 z-40  shadow-[5px_5px_0px_rgba(0,0,0,0.9)]  md:h-nav ${
         menuOpen ? "rounded-3xl" : "rounded-full h-navMobile"
       } flex items-center`}
     >
@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className=" relative flex items-center flex-wrap justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="">
+            <Link onClick={handleMenu} href="/" className="">
               <Image
                 src="/img/logo3_transparent.png"
                 width={0}
@@ -68,6 +68,7 @@ export default function Navbar() {
           >
             <div className="ml-10 flex flex-col md:flex-row items-end md:items-baseline space-x-8 gap-4 md:gap-0 mb-8 md:mb-0">
               <Link
+                onClick={handleMenu}
                 href="/"
                 className={`text-black hover:text-violet-600 font-medium text-sm transition-colors duration-200 ${
                   pathname !== "/" ? "line-through" : ""
@@ -76,6 +77,7 @@ export default function Navbar() {
                 Inicio
               </Link>
               <Link
+                onClick={handleMenu}
                 href="/articulos"
                 className={`text-black hover:text-violet-600 font-medium text-sm transition-colors duration-200 ${
                   pathname !== "/articulos" ? "line-through" : ""
@@ -84,6 +86,7 @@ export default function Navbar() {
                 Artículos
               </Link>
               <Link
+                onClick={handleMenu}
                 href="/sobre"
                 className={`text-black hover:text-violet-600 font-medium text-sm transition-colors duration-200 ${
                   pathname !== "/sobre" ? "line-through" : ""
@@ -92,6 +95,7 @@ export default function Navbar() {
                 Sobre nosotros
               </Link>
               <Link
+                onClick={handleMenu}
                 href="https://form.jotform.com/252871988769079"
                 target="_blank"
                 className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-2 rounded-full transition-colors duration-200"
