@@ -143,10 +143,10 @@ export default function ContraNarrativa() {
                 <h4 className="text-3xl font-bold mt-10">Objetivo general</h4>
                 <p className="text-2xl">
                   <b>Empoderar a los jóvenes nicaragüenses</b> en condición de
-                  desplazamiento forzado brindándoles herramientas para poder
-                  <b>enfrentar</b> de manera estratégica
+                  desplazamiento forzado brindándoles herramientas para poder{" "}
+                  <b>enfrentar</b> de manera estratégica{" "}
                   <b>la desinformación</b> sobre la crisis sociopolítica en
-                  Nicaragua y la migración en Costa Rica, mientras se
+                  Nicaragua y la migración en Costa Rica, mientras se{" "}
                   <b>
                     promueve la defensa de la libertad de expresión y de prensa
                   </b>
