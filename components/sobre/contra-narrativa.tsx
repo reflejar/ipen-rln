@@ -11,7 +11,7 @@ export default function ContraNarrativa() {
   return (
     <section
       id="contranarrativa"
-      className="  h-screen min-h-screen flex items-center justify-center overflow-hidden "
+      className="bg-[url('/img/carousel-contranarrativa1.webp')]  h-screen min-h-screen flex items-center justify-center overflow-hidden "
     >
       {/* Background Geometric Shapes */}
       {/* Content */}

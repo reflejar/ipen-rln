@@ -4,9 +4,9 @@ export default function PorQue() {
       {/* Background Geometric Shapes */}
       {/* Content */}
 
-      <div className="bg-[url('/img/bg-como-empezamos.webp')] lg:bg-none md:min-h-screen w-full lg:w-1/2 bg-contain bg-no-repeat bg-left flex flex-col md:pt-16">
-        <div className="p-5 md:w-2/4 m-auto">
-          <h1 className="text-4xl font-bold text-gray-800 sr-only">
+      <div className="bg-[url('/img/bg-como-empezamos.webp')] lg:bg-none h-[50dvh] md:min-h-screen w-full lg:w-1/2 bg-cover bg-left flex flex-col md:pt-16">
+        <div className="p-5 md:w-3/4 m-auto">
+          <h1 className="text-4xl font-bold text-gray-800">
             Sobre el proyecto
           </h1>
           <h3>
@@ -31,12 +31,12 @@ export default function PorQue() {
           </p>
         </div>
       </div>
-      <div className="bg-[url('/img/bg-que-buscamos.webp')] lg:bg-none md:min-h-screen w-full lg:w-2/3 bg-contain bg-no-repeat bg-right  flex flex-col md:pt-16">
-        <div className="p-5 md:w-2/4 m-auto">
+      <div className="bg-[url('/img/bg-que-buscamos.webp')] lg:bg-none  h-[50dvh] md:min-h-screen w-full lg:w-2/3 bg-cover bg-right  flex flex-col md:pt-16">
+        <div className="p-5 md:w-3/4 m-auto">
           <h3>
             <b>¿Qué buscamos?</b>
           </h3>
-          <p className="mt-2 md:mt-10 text-base md:text-lg text-gray-800">
+          <p className="mt-2 md:mt-10 text-sm md:text-lg text-gray-800">
             Se impulsa la creación de una <b>Red de Comunicadores Emergentes</b>
             , como producto estratégico con los siguientes objetivos y
             resultados esperados.{" "}
