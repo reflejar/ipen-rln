@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { Highlighter } from "../ui/highlighter";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 
 export default function Historia() {
   return (
@@ -44,6 +50,8 @@ export default function Historia() {
             ></Image>
           </CarouselItem>
         </CarouselContent>
+        <CarouselPrevious className="left-5" />
+        <CarouselNext className="right-5" />
       </Carousel>
       {/* <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 items-center">
