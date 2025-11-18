@@ -27,9 +27,13 @@ import ContentStoryblok from "@/components/articulos/Contentstoryblok";
 
 export async function generateStaticParams() {
   const articles = await fetchData();
-  return articles.data.stories.map((article: any) => {
-    return { slug: article.slug };
-  });
+  if (!articles?.data?.stories?.length) {
+    return [{ slug: "notFound" }];
+  }
+
+  return articles.data.stories.map((story: any) => ({
+    slug: story.slug,
+  }));
 }
 
 export default async function Articulo({
@@ -37,6 +41,7 @@ export default async function Articulo({
 }: {
   params: { slug: string };
 }) {
+  if (params.slug === "notFound") notFound();
   const data = await fetchArticleBySlug(params.slug);
   const { name, slug, content, first_published_at, tag_list } = data.data.story;
 

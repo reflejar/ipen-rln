@@ -33,7 +33,7 @@ export default function HeroAbout() {
             alt="ipen logo"
             width={0}
             height={0}
-            className="w-full min-h-screen right-0"
+            className="md:hidden w-full min-h-screen right-0"
             sizes="100vw"
           ></Image>
         </div>
