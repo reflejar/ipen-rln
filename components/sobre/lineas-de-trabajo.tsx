@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const lineas = [
   {
@@ -41,8 +42,15 @@ export default function LineasTrabajo() {
               Líneas de <br /> trabajo
             </h6>
             <div className=" mt-4 flex flex-col gap-5">
-              <Button>Quiero ser parte</Button>
-              <Button>Recursos para escritores</Button>
+              <Button asChild>
+                <Link
+                  href="https://form.jotform.com/252871988769079"
+                  target="_blank"
+                >
+                  Quiero ser parte
+                </Link>
+              </Button>
+              <Button disabled>Recursos para escritores</Button>
             </div>
           </div>
         </div>

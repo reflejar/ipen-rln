@@ -54,14 +54,14 @@ export default function Footer() {
               />
             </div>
             <div className="border-t-2 pt-6 md:border-t-0 md:border-l-2 md:pl-6 md:pt-0 text-center">
-              <p className=" text-sm text-gray-300">En colaboración con</p>
+              <p className=" text-xs mb-1 text-gray-300">En colaboración con</p>
 
               <Image
                 src="/img/pidc_logo.png"
                 alt="ipdc logo"
                 width={0}
                 height={0}
-                className="w-auto mx-auto max-h-28 left-0"
+                className="w-auto mx-auto max-h-24 left-0"
                 sizes="100vw"
               ></Image>
             </div>
