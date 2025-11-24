@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Logos */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center">
               <a href="https://www.ipuentes.org/" target="_blank">
                 <Image
                   src="/img/ipen_logo.png"
@@ -49,7 +49,7 @@ export default function Footer() {
                 alt="puzzle logo"
                 width={0}
                 height={0}
-                className="w-auto max-h-20 left-0"
+                className="w-auto max-h-28 left-0"
                 sizes="100vw"
               />
             </div>
@@ -61,7 +61,7 @@ export default function Footer() {
                 alt="ipdc logo"
                 width={0}
                 height={0}
-                className="w-auto mx-auto max-h-32 left-0"
+                className="w-auto mx-auto max-h-28 left-0"
                 sizes="100vw"
               ></Image>
             </div>
