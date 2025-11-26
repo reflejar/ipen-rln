@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function LoadingProvider({
   children,
-  minLoadingTime = 3000, // tiempo mínimo en ms
+  minLoadingTime = 3000,
 }: {
   children: React.ReactNode;
   minLoadingTime?: number;
@@ -17,7 +17,6 @@ export default function LoadingProvider({
   const pathname = usePathname();
 
   useEffect(() => {
-    // ✅ Se ejecuta solo en el cliente
     const setCookie = (
       name: string,
       value: string | number | boolean,
@@ -60,7 +59,9 @@ export default function LoadingProvider({
         <BlurFade
           direction="down"
           duration={1}
-          className={`fixed top-0 transition-all ${loading ? "z-50" : "-z-50"}`}
+          className={`fixed top-0 transition-all ${
+            loading ? "z-50 w-full" : "-z-50"
+          }`}
         >
           <section
             className={`bg-[url('/img/bg-paisita.webp')] min-h-screen bg-cover bg-center flex items-center justify-center overflow-hidden relative transition-all duration-700 ${
@@ -68,10 +69,10 @@ export default function LoadingProvider({
             }`}
           >
             <Image
-              src="/img/logo3_transparent.png"
+              src="/img/slashergif.webp"
               width={0}
               height={0}
-              className="w-full md:w-10/12"
+              className="w-auto h-[100dvh]"
               sizes="100vw"
               alt="logo reescribiendo la narrativa"
             />
