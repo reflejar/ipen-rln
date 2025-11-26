@@ -72,7 +72,7 @@ export default function LoadingProvider({
               src="/img/slashergif.webp"
               width={0}
               height={0}
-              className="max-w-[200%] w-[150vw] md:w-auto md:h-[100dvh]"
+              className="max-w-[200%] w-[135dvw] md:w-auto md:h-[100dvh]"
               sizes="100vw"
               alt="logo reescribiendo la narrativa"
             />
