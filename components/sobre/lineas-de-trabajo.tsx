@@ -50,7 +50,14 @@ export default function LineasTrabajo() {
                   Quiero ser parte
                 </Link>
               </Button>
-              <Button disabled>Recursos para escritores</Button>
+              <Button asChild>
+                <Link
+                  href="https://drive.google.com/file/d/1svt423UEqL28OOQ-0ZHVEl0DmzSO78B5/view?usp=sharing"
+                  target="_blank"
+                >
+                  Recursos para escritores
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
