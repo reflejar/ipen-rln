@@ -63,23 +63,24 @@ export default async function Articulo({
         height={0}
         className="w-10/12 mx-auto rounded-3xl max-h-64 object-cover"
         sizes="100vw"
-        src={content.Header?.filename || "/img/noFoundImage.webp"}
+        src={content.Portada?.filename || "/img/noFoundImage.webp"}
         alt={slug}
       />
       <article className="h-screen relative min-h-screen  overflow-hidden pt-8 w-10/12 mx-auto flex flex-col-reverse md:flex-row justify-between">
-        <div className="w-9/12">
-          <h1 className="text-2xl md:text-3xl font-semibold mb-8 max-w-4xl mx-auto lg:mx-0">
+        <div className="w-11/12 md:w-9/12 mb-10">
+          <h1 className="text-4xl md:text-5xl font-semibold mb-8 max-w-4xl mx-auto lg:mx-0">
             {content.Title}
           </h1>
-          <Content document={content.Body} />
+          <Content document={content.Contenido} />
           {/* <ContentStoryblok content={content} /> */}
         </div>
         <div className="md:text-right flex flex-col gap-4">
           <div className="mb-3">
-            <p className="uppercase font-bold mb-2">author</p>
+            <p className="uppercase font-bold mb-2">autor</p>
             <p className="bg-violet-300 px-3 py-1 rounded-full text-center">
-              {content.authors?.map((author: any) => author).join(", ") ||
-                "Anónimo"}
+              {content.Autor?.map((author: any) => author.component).join(
+                ", "
+              ) || "Anónimo"}
             </p>
           </div>
           <div className="mb-3">

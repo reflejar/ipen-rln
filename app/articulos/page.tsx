@@ -4,7 +4,7 @@ import { getStoryblokApi, ISbStoriesParams } from "@storyblok/react/rsc";
 export default async function Articulos() {
   const data = await fetchData();
 
-  if (data?.data?.stories) {
+  if (data.data?.stories.length === 0) {
     return (
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
         <h2 className="text-3xl font-semibold mb-4">

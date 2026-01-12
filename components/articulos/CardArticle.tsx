@@ -30,7 +30,9 @@ export default function CardArticle({
               height={0}
               className="w-full min-h-52 max-h-52 object-cover"
               sizes="100vw"
-              src={article.content.Header?.filename || "/img/noFoundImage.webp"}
+              src={
+                article.content.Portada?.filename || "/img/noFoundImage.webp"
+              }
               alt={article.slug}
             />
           </div>
