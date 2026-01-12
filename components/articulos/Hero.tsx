@@ -25,7 +25,7 @@ export default async function Hero({ articles }: { articles: ISbStoryData[] }) {
   };
 
   return (
-    <section className="h-screen relative min-h-screen flex justify-center overflow-hidden pt-8">
+    <section className="h-screen relative min-h-screen flex justify-center overflow-hidden pt-16">
       {/* Background Geometric Shapes */}
       {/* Content */}
       <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8">
