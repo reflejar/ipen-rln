@@ -21,6 +21,20 @@ import Image from "next/image";
 import Link from "next/link";
 import YTVideo from "./YTVideo";
 
+const textAlignClass = (textAlign?: string | null) => {
+  switch (textAlign) {
+    case "center":
+      return "text-center [&>img]:mx-auto";
+    case "right":
+      return "text-right [&>img]:ml-auto";
+    case "justify":
+      return "text-justify [&>img]:mr-auto";
+    case "left":
+    default:
+      return "text-left [&>img]:mr-auto";
+  }
+};
+
 const Content = ({ document }: { document: ISbStoryData }) => {
   return (
     <>
@@ -34,7 +48,7 @@ const Content = ({ document }: { document: ISbStoryData }) => {
           ),
           [MARK_STYLED]: (
             children: ReactNode,
-            props: { class?: string | undefined }
+            props: { class?: string | undefined },
           ) => {
             props.class == "centered"
               ? (props.class = "text-center flex flex-col items-center")
@@ -60,7 +74,7 @@ const Content = ({ document }: { document: ISbStoryData }) => {
               anchor?: string;
               uuid?: string;
               custom?: LinkCustomAttributes;
-            }
+            },
           ) => {
             const { linktype, href } = props;
             if (linktype === "email") {
@@ -79,13 +93,18 @@ const Content = ({ document }: { document: ISbStoryData }) => {
           },
         },
         nodeResolvers: {
-          [NODE_PARAGRAPH]: (children: ReactNode) => {
-            let paragraph = <p className="my-2">{children}</p>;
-            // Empty paragraph handler (Enter pressed for multiple lines after an element)
-            children == null && (paragraph = <br />);
-            return paragraph;
+          [NODE_PARAGRAPH]: (children: ReactNode, attrs) => {
+            if (children == null) return <br />;
+            return (
+              <p className={`my-2 ${textAlignClass(attrs.textAlign)} `}>
+                {children}
+              </p>
+            );
           },
-          [NODE_HEADING]: (children: ReactNode, { level }) => {
+          [NODE_HEADING]: (
+            children: ReactNode,
+            { level, textAlign }: { level: number; textAlign?: string | null },
+          ) => {
             let elem = "";
             let setClass = "";
             if (level === 1) {
@@ -115,8 +134,10 @@ const Content = ({ document }: { document: ISbStoryData }) => {
 
             return createElement(
               elem,
-              setClass ? { className: `${setClass} mb-5 font-bold` } : null,
-              children
+              {
+                className: `${setClass} mb-5 font-bold ${textAlignClass(textAlign)}`,
+              },
+              children,
             );
           },
           [NODE_OL]: (children: ReactNode) => (
@@ -136,17 +157,17 @@ const Content = ({ document }: { document: ISbStoryData }) => {
           [NODE_HR]: () => (
             <hr className="border-t-[1px] border-t-gray-300 my-4" />
           ),
-          [NODE_IMAGE]: (children: ReactNode, { src, alt, title }) => {
-            if (!src) return null;
-            if (!alt) {
-              alt = "alternative image description not available";
+          [NODE_IMAGE]: (children: ReactNode, attrs) => {
+            if (!attrs.src) return null;
+            if (!attrs.alt) {
+              attrs.alt = "alternative image description not available";
             }
             return (
               <Image
                 className="object-contain m-3"
-                src={src}
-                alt={alt}
-                title={title}
+                src={attrs.src}
+                alt={attrs.alt}
+                title={attrs.title}
                 width={500}
                 height={500}
               />

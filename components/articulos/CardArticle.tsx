@@ -28,7 +28,7 @@ export default function CardArticle({
             <Image
               width={0}
               height={0}
-              className="w-full min-h-52 max-h-52 object-cover"
+              className="w-full aspect-[21/7] object-cover object-center"
               sizes="100vw"
               src={
                 article.content.Portada?.filename || "/img/noFoundImage.webp"

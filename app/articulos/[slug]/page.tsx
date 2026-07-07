@@ -61,7 +61,7 @@ export default async function Articulo({
       <Image
         width={0}
         height={0}
-        className="w-10/12 mx-auto rounded-3xl max-h-64 object-cover"
+        className="w-10/12 mx-auto aspect-[21/6] object-cover object-center rounded-3xl"
         sizes="100vw"
         src={content.Portada?.filename || "/img/noFoundImage.webp"}
         alt={slug}
@@ -79,7 +79,7 @@ export default async function Articulo({
             <p className="uppercase font-bold mb-2">autor</p>
             <p className="bg-violet-300 px-3 py-1 rounded-full text-center">
               {content.Autor?.map((author: any) => author.component).join(
-                ", "
+                ", ",
               ) || "Anónimo"}
             </p>
           </div>
@@ -100,7 +100,7 @@ export default async function Articulo({
             <div className="flex gap-4 justify-start md:justify-end">
               <a
                 href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                  `https://reescribiendonarrativas.org/articulos/${slug}`
+                  `https://reescribiendonarrativas.org/articulos/${slug}`,
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,7 +114,7 @@ export default async function Articulo({
               </a>
               <a
                 href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                  `https://reescribiendonarrativas.org/articulos/${slug}`
+                  `https://reescribiendonarrativas.org/articulos/${slug}`,
                 )}&text=${encodeURIComponent(content.Title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -124,7 +124,7 @@ export default async function Articulo({
               </a>
               <a
                 href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-                  `https://reescribiendonarrativas.org/articulos/${slug}`
+                  `https://reescribiendonarrativas.org/articulos/${slug}`,
                 )}&title=${encodeURIComponent(content.Title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
