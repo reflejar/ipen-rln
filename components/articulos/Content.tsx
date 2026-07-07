@@ -93,10 +93,15 @@ const Content = ({ document }: { document: ISbStoryData }) => {
           },
         },
         nodeResolvers: {
-          [NODE_PARAGRAPH]: (children: ReactNode, attrs) => {
+          [NODE_PARAGRAPH]: (
+            children: ReactNode,
+            attrs?: { textAlign?: string | null },
+          ) => {
             if (children == null) return <br />;
             return (
-              <p className={`my-2 ${textAlignClass(attrs.textAlign)} `}>
+              <p
+                className={`my-2 ${attrs?.textAlign ? textAlignClass(attrs.textAlign) : ""} `}
+              >
                 {children}
               </p>
             );
